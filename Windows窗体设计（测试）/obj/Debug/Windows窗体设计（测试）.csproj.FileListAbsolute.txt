@@ -1,0 +1,10 @@
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体设计（测试）\bin\Debug\Windows窗体设计（测试）.exe.config
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体设计（测试）\bin\Debug\Windows窗体设计（测试）.exe
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体设计（测试）\bin\Debug\Windows窗体设计（测试）.pdb
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体设计（测试）\obj\Debug\Windows窗体设计（测试）.csprojAssemblyReference.cache
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体设计（测试）\obj\Debug\Windows窗体设计_测试_.Form1.resources
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体设计（测试）\obj\Debug\Windows窗体设计_测试_.Properties.Resources.resources
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体设计（测试）\obj\Debug\Windows窗体设计（测试）.csproj.GenerateResource.cache
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体设计（测试）\obj\Debug\Windows窗体设计（测试）.csproj.CoreCompileInputs.cache
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体设计（测试）\obj\Debug\Windows窗体设计（测试）.exe
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体设计（测试）\obj\Debug\Windows窗体设计（测试）.pdb

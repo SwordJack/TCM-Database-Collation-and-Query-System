@@ -1,0 +1,10 @@
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\bin\Debug\Console访问中医药数据库（测试）.exe.config
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\bin\Debug\Console访问中医药数据库（测试）.exe
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\bin\Debug\Console访问中医药数据库（测试）.pdb
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\obj\Debug\Console访问中医药数据库（测试）.csprojAssemblyReference.cache
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\obj\Debug\Console访问中医药数据库（测试）.csproj.CoreCompileInputs.cache
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\obj\Debug\Console访问中医药数据库（测试）.exe
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\obj\Debug\Console访问中医药数据库（测试）.pdb
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\bin\Debug\TCMServerConstructionAuxiliary.dll
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\bin\Debug\TCMServerConstructionAuxiliary.pdb
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\obj\Debug\Console访问中医药数据库（测试）.csproj.CopyComplete

@@ -1,0 +1,8 @@
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\TCMServerConstructionAuxiliary\bin\Debug\netstandard2.0\TCMServerConstructionAuxiliary.deps.json
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\TCMServerConstructionAuxiliary\bin\Debug\netstandard2.0\TCMServerConstructionAuxiliary.dll
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\TCMServerConstructionAuxiliary\bin\Debug\netstandard2.0\TCMServerConstructionAuxiliary.pdb
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.csproj.CoreCompileInputs.cache
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.AssemblyInfoInputs.cache
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.AssemblyInfo.cs
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.dll
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.pdb
