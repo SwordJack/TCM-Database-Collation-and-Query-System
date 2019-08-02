@@ -7,23 +7,24 @@ namespace TCMServerConstructionAuxiliary
     //
     public class InputCheck
     {
-        //
-        //输入序列号文本，函数将根据校验码校验结果，返回“校验通过”或“校验不通过”。
-        //
-        //
-        //“
-        //校验码按GB 12904及GB/T 17710校验码计算方法规定。
-        //代码位置序号是指包括校验码在内的,由右至左的顺序号（校验码的代码位置序号为1）。
-        //
-        //校验码的计算步骤如下：
-        //
-        //a、从代码位置序号2开始，所有偶数位的数字代码求和；
-        //b、将步骤a的和乘以3；
-        //c、从代码位置序号3开始，所有奇数位的数字代码求和；
-        //d、将步骤b与步骤c的结果相加；
-        //e、用大于或等于步骤d所得结果且为10最小整数倍的数减去步骤d所得结果，其差即为所求校验码的值。
-        //”
-        //
+        /// <summary>
+        ///
+        /// 校验码按GB 12904及GB/T 17710校验码计算方法规定。<br />
+        /// <br />
+        /// 代码位置序号是指包括校验码在内的,由右至左的顺序号（校验码的代码位置序号为1）。<br />
+        /// 校验码的计算步骤如下：<br />
+        /// <br />
+        /// a、从代码位置序号2开始，所有偶数位的数字代码求和；<br />
+        /// b、将步骤a的和乘以3；<br />
+        /// c、从代码位置序号3开始，所有奇数位的数字代码求和；<br />
+        /// d、将步骤b与步骤c的结果相加；<br />
+        /// e、用大于或等于步骤d所得结果且为10最小整数倍的数减去步骤d所得结果，其差即为所求校验码的值。<br />
+        /// <br />
+        /// 输入序列号文本，函数将根据校验码是否符合上述规则，返回“true”或“false”。<br />
+        /// 
+        /// </summary>
+        /// <param name="codeText"></param>
+        /// <returns></returns>
         public static bool CheckCodeVerification(string codeText)
         {
             try
@@ -56,18 +57,6 @@ namespace TCMServerConstructionAuxiliary
     //
     public class SelectStatementGeneration
     {
-        string textBegin = "USE TraditionalChinese\nGO";    //所有查询语句均以此开头。
-        string textMedicine = "";                           //药物查询的代码主体。
-        string textFinish = "GO";                           //所有查询语句均以此结尾。
-
-
-        //
-        //查询数据库中所有中药的信息。
-        //
-        public static string SelectAllMedicine()
-        {
-            
-            return "";
-        }
+        
     }
 }

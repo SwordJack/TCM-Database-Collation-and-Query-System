@@ -63,7 +63,7 @@
             this.tpDelete = new System.Windows.Forms.TabPage();
             this.btDelReset = new System.Windows.Forms.Button();
             this.tbDelMessage = new System.Windows.Forms.TextBox();
-            this.cbBindAlias = new System.Windows.Forms.CheckBox();
+            this.cbDelConfirm = new System.Windows.Forms.CheckBox();
             this.btDelMed = new System.Windows.Forms.Button();
             this.lblDelCheckCode = new System.Windows.Forms.Label();
             this.tbDelTCMCode = new System.Windows.Forms.TextBox();
@@ -365,7 +365,7 @@
             this.tbInsTCMCode.Name = "tbInsTCMCode";
             this.tbInsTCMCode.Size = new System.Drawing.Size(143, 23);
             this.tbInsTCMCode.TabIndex = 8;
-            this.tbInsTCMCode.Leave += new System.EventHandler(this.TbTCMCode_Leave);
+            this.tbInsTCMCode.Leave += new System.EventHandler(this.TbInsTCMCode_Leave);
             // 
             // lblIllustration
             // 
@@ -441,7 +441,7 @@
             // 
             this.tpDelete.Controls.Add(this.btDelReset);
             this.tpDelete.Controls.Add(this.tbDelMessage);
-            this.tpDelete.Controls.Add(this.cbBindAlias);
+            this.tpDelete.Controls.Add(this.cbDelConfirm);
             this.tpDelete.Controls.Add(this.btDelMed);
             this.tpDelete.Controls.Add(this.lblDelCheckCode);
             this.tpDelete.Controls.Add(this.tbDelTCMCode);
@@ -478,16 +478,17 @@
             this.tbDelMessage.TabIndex = 22;
             this.tbDelMessage.Text = "消息窗口";
             // 
-            // cbBindAlias
+            // cbDelConfirm
             // 
-            this.cbBindAlias.AutoSize = true;
-            this.cbBindAlias.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbBindAlias.Location = new System.Drawing.Point(25, 126);
-            this.cbBindAlias.Name = "cbBindAlias";
-            this.cbBindAlias.Size = new System.Drawing.Size(120, 16);
-            this.cbBindAlias.TabIndex = 21;
-            this.cbBindAlias.Text = "同时删除药物别名";
-            this.cbBindAlias.UseVisualStyleBackColor = true;
+            this.cbDelConfirm.AutoSize = true;
+            this.cbDelConfirm.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbDelConfirm.Location = new System.Drawing.Point(24, 119);
+            this.cbDelConfirm.Name = "cbDelConfirm";
+            this.cbDelConfirm.Size = new System.Drawing.Size(72, 16);
+            this.cbDelConfirm.TabIndex = 21;
+            this.cbDelConfirm.Text = "确认删除";
+            this.cbDelConfirm.UseVisualStyleBackColor = true;
+            this.cbDelConfirm.CheckedChanged += new System.EventHandler(this.BtDelMed_Enabled_Check_Manual);
             // 
             // btDelMed
             // 
@@ -519,7 +520,7 @@
             this.tbDelTCMCode.Name = "tbDelTCMCode";
             this.tbDelTCMCode.Size = new System.Drawing.Size(143, 23);
             this.tbDelTCMCode.TabIndex = 18;
-            this.tbDelTCMCode.Leave += new System.EventHandler(this.TbDelTCMCode_Leave);
+            this.tbDelTCMCode.Leave += new System.EventHandler(this.BtDelMed_Enabled_Check_Manual);
             // 
             // lblDelTCMCode
             // 
@@ -773,7 +774,7 @@
         private System.Windows.Forms.TextBox tbDelTCMCode;
         private System.Windows.Forms.Label lblDelTCMCode;
         private System.Windows.Forms.Button btDelMed;
-        private System.Windows.Forms.CheckBox cbBindAlias;
+        private System.Windows.Forms.CheckBox cbDelConfirm;
         private System.Windows.Forms.TextBox tbDelMessage;
         private System.Windows.Forms.Button btDelReset;
         private System.Windows.Forms.TabPage tpSelAll;

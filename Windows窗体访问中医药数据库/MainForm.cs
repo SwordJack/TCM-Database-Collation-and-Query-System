@@ -12,6 +12,7 @@ using TCMServerConstructionAuxiliary;
 
 namespace Windows窗体访问中医药数据库
 {
+    
     public partial class MainForm : Form
     {
         public MainForm()
@@ -65,7 +66,7 @@ namespace Windows窗体访问中医药数据库
             tcmConnection.Dispose();
         }
 
-
+    
         /****查询****/
 
         //
@@ -79,8 +80,10 @@ namespace Windows窗体访问中医药数据库
                 dataGridViewMain0.DataSource = dataGridViewMain1.DataSource = null;
                 dataSetSel.Dispose();
                 storedProcedureName = "Select_Medicine_By_Name";
-                command = new SqlCommand(storedProcedureName, tcmConnection);
-                command.CommandType = CommandType.StoredProcedure;
+                command = new SqlCommand(storedProcedureName, tcmConnection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 command.Parameters.Add("@input", SqlDbType.VarChar, 20).Value = tbSelMedName.Text;
                 tcmAdapter = new SqlDataAdapter(command);
                 dataSetSel = new DataSet();
@@ -123,7 +126,7 @@ namespace Windows窗体访问中医药数据库
         }
 
         /************/
-
+    
 
         /****插入****/
 
@@ -150,7 +153,7 @@ namespace Windows窗体访问中医药数据库
         //
         //对药物代码的校验情况做出响应。
         //
-        private void TbTCMCode_Leave(object sender, EventArgs e)
+        private void TbInsTCMCode_Leave(object sender, EventArgs e)
         {
             checkInsMedCode = InputCheck.CheckCodeVerification(tbInsTCMCode.Text) && tbInsTCMCode.Text.Length == 17;
             if (checkInsMedCode)
@@ -213,6 +216,13 @@ namespace Windows窗体访问中医药数据库
         //
         private void BtInsMed_Click(object sender, EventArgs e)
         {
+            if (tbMedicineAlias.Text == "")
+            {
+                if (MessageBox.Show("你确定这味药物没有别名吗？", "录入确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.OK)
+                {
+                    return;
+                }
+            }
             InsertTextboxStatus = false;
             tbInsMessage.Clear();
             if (!checkInsMedCode || tbCommodityName.Text == "" || tbSerialNumber.Text.Length != 5 || (tbRemark.Text != "A" && tbRemark.Text != "B"))
@@ -228,8 +238,10 @@ namespace Windows窗体访问中医药数据库
             storedProcedureName = "Insert_Medicine_Information";
             try
             {
-                command = new SqlCommand(storedProcedureName, tcmConnection);
-                command.CommandType = CommandType.StoredProcedure;
+                command = new SqlCommand(storedProcedureName, tcmConnection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 command.Parameters.Add("@TCM_Code", SqlDbType.Char, 17).Value = tbInsTCMCode.Text;                                  //中药代码
                 command.Parameters.Add("@Serial_Num", SqlDbType.Char, 5).Value = tbSerialNumber.Text;                               //顺序号
                 command.Parameters.Add("@Commodity_Name", SqlDbType.VarChar, 50).Value = tbCommodityName.Text;                      //品名
@@ -267,9 +279,11 @@ namespace Windows窗体访问中医药数据库
                 {
                     if (medAlias.Length > 1)                                     //若该行有字符，则将字符内容录入。
                     {
-                        command = new SqlCommand(storedProcedureName, tcmConnection);
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@TCM_Species_Code", tbInsTCMCode.Text.Substring(0, 12));
+                        command = new SqlCommand(storedProcedureName, tcmConnection)
+                        {
+                            CommandType = CommandType.StoredProcedure
+                        };
+                        command.Parameters.AddWithValue("@TCM_Code", tbInsTCMCode.Text);
                         command.Parameters.AddWithValue("@Medicine_Alias_Name", medAlias);
                         recordsAffected += command.ExecuteNonQuery();
                         command.Dispose();
@@ -289,7 +303,7 @@ namespace Windows窗体访问中医药数据库
         }
 
         /************/
-
+    
 
         /****删除****/
 
@@ -298,26 +312,29 @@ namespace Windows窗体访问中医药数据库
         //
         //对待删除的药物代码的校验情况做出响应。
         //
-        private void TbDelTCMCode_Leave(object sender, EventArgs e)
+        private void BtDelMed_Enabled_Check_Manual(object sender, EventArgs e)
         {
-            checkDelMedCode = InputCheck.CheckCodeVerification(tbDelTCMCode.Text) && tbDelTCMCode.Text.Length == 17;
+            checkDelMedCode = InputCheck.CheckCodeVerification(tbDelTCMCode.Text)
+                && (tbDelTCMCode.Text.Length == 17);
+
             if (checkDelMedCode)
             {
                 lblDelCheckCode.ForeColor = Color.Black;
                 lblDelCheckCode.Text = "校验通过。";
-                btDelMed.Enabled = true;
+                if (cbDelConfirm.Checked) btDelMed.Enabled = true;
+                else btDelMed.Enabled = false;
             }
             else if (tbDelTCMCode.Text == "")
             {
                 lblDelCheckCode.ForeColor = Color.Black;
                 lblDelCheckCode.Text = "请输入药物代码。";
-                btInsMed.Enabled = false;
+                btDelMed.Enabled = false;
             }
             else
             {
                 lblDelCheckCode.ForeColor = Color.Red;
                 lblDelCheckCode.Text = "校验不通过！";
-                btInsMed.Enabled = false;
+                btDelMed.Enabled = false;
             }
         }
 
@@ -326,19 +343,19 @@ namespace Windows窗体访问中医药数据库
         //
         private void BtDelMed_Click(object sender, EventArgs e)
         {
-            tbDelTCMCode.Enabled = cbBindAlias.Enabled = false;
+            tbDelTCMCode.Enabled = cbDelConfirm.Enabled = false;
             if (!checkDelMedCode)
             {
-                tbDelTCMCode.Enabled = cbBindAlias.Enabled = true;
+                tbDelTCMCode.Enabled = cbDelConfirm.Enabled = true;
                 return;
             }
             int recordsAffected;
             storedProcedureName = "Delete_Medicine_Records";
-            command = new SqlCommand(storedProcedureName, tcmConnection);
-            command.CommandType = CommandType.StoredProcedure;
+            command = new SqlCommand(storedProcedureName, tcmConnection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
             command.Parameters.Add("@TCM_Code", SqlDbType.Char, 17).Value = tbDelTCMCode.Text;
-            if (cbBindAlias.Checked) command.Parameters.Add("@Bind_Alias", SqlDbType.Bit).Value = 1;
-            else command.Parameters.Add("@Bind_Alias", SqlDbType.Bit).Value = 0;
 
             try
             {
@@ -351,29 +368,32 @@ namespace Windows窗体访问中医药数据库
                 {
                     tbDelMessage.Text = "未找到需删除的记录。";
                 }
+                cbDelConfirm.Checked = false;
             }
             catch (Exception exc)
             {
                 tbDelMessage.Text += String.Format("删除数据出错：\n{0}", exc);
             }
 
-            tbDelTCMCode.Enabled = cbBindAlias.Enabled = true;
+            tbDelTCMCode.Enabled = cbDelConfirm.Enabled = true;
         }
 
+
         //
-        //重置删除内容。
+        //重置“删除”标签页。
         //
         private void BtDelReset_Click(object sender, EventArgs e)
         {
+            btDelMed.Enabled = false;
             tbDelTCMCode.Clear();
-            cbBindAlias.Checked = false;
+            cbDelConfirm.Checked = false;
             tbDelMessage.Text = "消息窗口";
             lblDelCheckCode.ForeColor = Color.Black;
             lblDelCheckCode.Text = "请输入药物代码。";
         }
 
         /************/
-
+    
 
         /***查全表***/
 
@@ -411,8 +431,10 @@ namespace Windows窗体访问中医药数据库
                 else if (rbSAllMedicine.Checked) storedProcedureName += "Medicine";
                 else if (rbSAllPrescriptionFunction.Checked) storedProcedureName += "PrescriptionFunction";
                 else return;
-                command = new SqlCommand(storedProcedureName, tcmConnection);
-                command.CommandType = CommandType.StoredProcedure;
+                command = new SqlCommand(storedProcedureName, tcmConnection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 tcmAdapter = new SqlDataAdapter(command);
                 dataSetSAll = new DataSet();
                 tcmAdapter.Fill(dataSetSAll);
