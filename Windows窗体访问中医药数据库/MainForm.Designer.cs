@@ -43,15 +43,15 @@
             this.tbInsMessage = new System.Windows.Forms.TextBox();
             this.btInsReset = new System.Windows.Forms.Button();
             this.btInsMed = new System.Windows.Forms.Button();
-            this.tbMedicineAlias = new System.Windows.Forms.TextBox();
+            this.tbInsMedicineAlias = new System.Windows.Forms.TextBox();
             this.lblInsCheckCode = new System.Windows.Forms.Label();
             this.lblCommodityAliasName = new System.Windows.Forms.Label();
-            this.tbIllustration = new System.Windows.Forms.TextBox();
-            this.tbRemark = new System.Windows.Forms.TextBox();
-            this.tbSourceArea = new System.Windows.Forms.TextBox();
-            this.tbMedicinalMaterialName = new System.Windows.Forms.TextBox();
-            this.tbCommodityName = new System.Windows.Forms.TextBox();
-            this.tbSerialNumber = new System.Windows.Forms.TextBox();
+            this.tbInsIllustration = new System.Windows.Forms.TextBox();
+            this.tbInsRemark = new System.Windows.Forms.TextBox();
+            this.tbInsSourceArea = new System.Windows.Forms.TextBox();
+            this.tbInsMedicinalMaterialName = new System.Windows.Forms.TextBox();
+            this.tbInsCommodityName = new System.Windows.Forms.TextBox();
+            this.tbInsSerialNumber = new System.Windows.Forms.TextBox();
             this.tbInsTCMCode = new System.Windows.Forms.TextBox();
             this.lblIllustration = new System.Windows.Forms.Label();
             this.lblRemark = new System.Windows.Forms.Label();
@@ -213,15 +213,15 @@
             this.tpInsert.Controls.Add(this.tbInsMessage);
             this.tpInsert.Controls.Add(this.btInsReset);
             this.tpInsert.Controls.Add(this.btInsMed);
-            this.tpInsert.Controls.Add(this.tbMedicineAlias);
+            this.tpInsert.Controls.Add(this.tbInsMedicineAlias);
             this.tpInsert.Controls.Add(this.lblInsCheckCode);
             this.tpInsert.Controls.Add(this.lblCommodityAliasName);
-            this.tpInsert.Controls.Add(this.tbIllustration);
-            this.tpInsert.Controls.Add(this.tbRemark);
-            this.tpInsert.Controls.Add(this.tbSourceArea);
-            this.tpInsert.Controls.Add(this.tbMedicinalMaterialName);
-            this.tpInsert.Controls.Add(this.tbCommodityName);
-            this.tpInsert.Controls.Add(this.tbSerialNumber);
+            this.tpInsert.Controls.Add(this.tbInsIllustration);
+            this.tpInsert.Controls.Add(this.tbInsRemark);
+            this.tpInsert.Controls.Add(this.tbInsSourceArea);
+            this.tpInsert.Controls.Add(this.tbInsMedicinalMaterialName);
+            this.tpInsert.Controls.Add(this.tbInsCommodityName);
+            this.tpInsert.Controls.Add(this.tbInsSerialNumber);
             this.tpInsert.Controls.Add(this.tbInsTCMCode);
             this.tpInsert.Controls.Add(this.lblIllustration);
             this.tpInsert.Controls.Add(this.lblRemark);
@@ -274,15 +274,15 @@
             this.btInsMed.UseVisualStyleBackColor = true;
             this.btInsMed.Click += new System.EventHandler(this.BtInsMed_Click);
             // 
-            // tbMedicineAlias
+            // tbInsMedicineAlias
             // 
-            this.tbMedicineAlias.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbMedicineAlias.Location = new System.Drawing.Point(520, 178);
-            this.tbMedicineAlias.Multiline = true;
-            this.tbMedicineAlias.Name = "tbMedicineAlias";
-            this.tbMedicineAlias.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbMedicineAlias.Size = new System.Drawing.Size(280, 97);
-            this.tbMedicineAlias.TabIndex = 17;
+            this.tbInsMedicineAlias.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsMedicineAlias.Location = new System.Drawing.Point(520, 178);
+            this.tbInsMedicineAlias.Multiline = true;
+            this.tbInsMedicineAlias.Name = "tbInsMedicineAlias";
+            this.tbInsMedicineAlias.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbInsMedicineAlias.Size = new System.Drawing.Size(280, 97);
+            this.tbInsMedicineAlias.TabIndex = 17;
             // 
             // lblInsCheckCode
             // 
@@ -304,58 +304,58 @@
             this.lblCommodityAliasName.TabIndex = 15;
             this.lblCommodityAliasName.Text = "药物别名（换行输入下一个）：";
             // 
-            // tbIllustration
+            // tbInsIllustration
             // 
-            this.tbIllustration.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbIllustration.Location = new System.Drawing.Point(398, 33);
-            this.tbIllustration.Multiline = true;
-            this.tbIllustration.Name = "tbIllustration";
-            this.tbIllustration.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbIllustration.Size = new System.Drawing.Size(402, 139);
-            this.tbIllustration.TabIndex = 14;
+            this.tbInsIllustration.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsIllustration.Location = new System.Drawing.Point(398, 33);
+            this.tbInsIllustration.Multiline = true;
+            this.tbInsIllustration.Name = "tbInsIllustration";
+            this.tbInsIllustration.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbInsIllustration.Size = new System.Drawing.Size(402, 139);
+            this.tbInsIllustration.TabIndex = 14;
             // 
-            // tbRemark
+            // tbInsRemark
             // 
-            this.tbRemark.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbRemark.Location = new System.Drawing.Point(118, 323);
-            this.tbRemark.MaxLength = 1;
-            this.tbRemark.Name = "tbRemark";
-            this.tbRemark.Size = new System.Drawing.Size(100, 23);
-            this.tbRemark.TabIndex = 13;
+            this.tbInsRemark.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsRemark.Location = new System.Drawing.Point(118, 323);
+            this.tbInsRemark.MaxLength = 1;
+            this.tbInsRemark.Name = "tbInsRemark";
+            this.tbInsRemark.Size = new System.Drawing.Size(100, 23);
+            this.tbInsRemark.TabIndex = 13;
             // 
-            // tbSourceArea
+            // tbInsSourceArea
             // 
-            this.tbSourceArea.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbSourceArea.Location = new System.Drawing.Point(118, 265);
-            this.tbSourceArea.Name = "tbSourceArea";
-            this.tbSourceArea.Size = new System.Drawing.Size(100, 23);
-            this.tbSourceArea.TabIndex = 12;
+            this.tbInsSourceArea.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsSourceArea.Location = new System.Drawing.Point(118, 265);
+            this.tbInsSourceArea.Name = "tbInsSourceArea";
+            this.tbInsSourceArea.Size = new System.Drawing.Size(100, 23);
+            this.tbInsSourceArea.TabIndex = 12;
             // 
-            // tbMedicinalMaterialName
+            // tbInsMedicinalMaterialName
             // 
-            this.tbMedicinalMaterialName.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbMedicinalMaterialName.Location = new System.Drawing.Point(118, 207);
-            this.tbMedicinalMaterialName.Name = "tbMedicinalMaterialName";
-            this.tbMedicinalMaterialName.Size = new System.Drawing.Size(100, 23);
-            this.tbMedicinalMaterialName.TabIndex = 11;
+            this.tbInsMedicinalMaterialName.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsMedicinalMaterialName.Location = new System.Drawing.Point(118, 207);
+            this.tbInsMedicinalMaterialName.Name = "tbInsMedicinalMaterialName";
+            this.tbInsMedicinalMaterialName.Size = new System.Drawing.Size(100, 23);
+            this.tbInsMedicinalMaterialName.TabIndex = 11;
             // 
-            // tbCommodityName
+            // tbInsCommodityName
             // 
-            this.tbCommodityName.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbCommodityName.Location = new System.Drawing.Point(118, 149);
-            this.tbCommodityName.Name = "tbCommodityName";
-            this.tbCommodityName.Size = new System.Drawing.Size(100, 23);
-            this.tbCommodityName.TabIndex = 10;
-            this.tbCommodityName.Leave += new System.EventHandler(this.TbCommodityName_Leave);
+            this.tbInsCommodityName.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsCommodityName.Location = new System.Drawing.Point(118, 149);
+            this.tbInsCommodityName.Name = "tbInsCommodityName";
+            this.tbInsCommodityName.Size = new System.Drawing.Size(100, 23);
+            this.tbInsCommodityName.TabIndex = 10;
+            this.tbInsCommodityName.Leave += new System.EventHandler(this.TbCommodityName_Leave);
             // 
-            // tbSerialNumber
+            // tbInsSerialNumber
             // 
-            this.tbSerialNumber.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbSerialNumber.Location = new System.Drawing.Point(118, 91);
-            this.tbSerialNumber.MaxLength = 5;
-            this.tbSerialNumber.Name = "tbSerialNumber";
-            this.tbSerialNumber.Size = new System.Drawing.Size(100, 23);
-            this.tbSerialNumber.TabIndex = 9;
+            this.tbInsSerialNumber.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsSerialNumber.Location = new System.Drawing.Point(118, 91);
+            this.tbInsSerialNumber.MaxLength = 5;
+            this.tbInsSerialNumber.Name = "tbInsSerialNumber";
+            this.tbInsSerialNumber.Size = new System.Drawing.Size(100, 23);
+            this.tbInsSerialNumber.TabIndex = 9;
             // 
             // tbInsTCMCode
             // 
@@ -749,7 +749,7 @@
         private System.Windows.Forms.Label lblSelMedName;
         private System.Windows.Forms.DataGridView dataGridViewMain1;
         private System.Windows.Forms.Button btSelReset;
-        private System.Windows.Forms.TextBox tbSerialNumber;
+        private System.Windows.Forms.TextBox tbInsSerialNumber;
         private System.Windows.Forms.TextBox tbInsTCMCode;
         private System.Windows.Forms.Label lblIllustration;
         private System.Windows.Forms.Label lblRemark;
@@ -759,13 +759,13 @@
         private System.Windows.Forms.Label lblSerialNumber;
         private System.Windows.Forms.Label lblInsTCMCode;
         private System.Windows.Forms.Label lblCommodityAliasName;
-        private System.Windows.Forms.TextBox tbIllustration;
-        private System.Windows.Forms.TextBox tbRemark;
-        private System.Windows.Forms.TextBox tbSourceArea;
-        private System.Windows.Forms.TextBox tbMedicinalMaterialName;
-        private System.Windows.Forms.TextBox tbCommodityName;
+        private System.Windows.Forms.TextBox tbInsIllustration;
+        private System.Windows.Forms.TextBox tbInsRemark;
+        private System.Windows.Forms.TextBox tbInsSourceArea;
+        private System.Windows.Forms.TextBox tbInsMedicinalMaterialName;
+        private System.Windows.Forms.TextBox tbInsCommodityName;
         private System.Windows.Forms.Label lblInsCheckCode;
-        private System.Windows.Forms.TextBox tbMedicineAlias;
+        private System.Windows.Forms.TextBox tbInsMedicineAlias;
         private System.Windows.Forms.Button btInsReset;
         private System.Windows.Forms.Button btInsMed;
         private System.Windows.Forms.TextBox tbInsMessage;

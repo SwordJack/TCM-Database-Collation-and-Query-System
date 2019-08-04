@@ -140,13 +140,13 @@ namespace Windows窗体访问中医药数据库
             set
             {
                 tbInsTCMCode.Enabled
-                = tbSerialNumber.Enabled
-                = tbCommodityName.Enabled
-                = tbMedicinalMaterialName.Enabled
-                = tbSourceArea.Enabled
-                = tbRemark.Enabled
-                = tbIllustration.Enabled
-                = tbMedicineAlias.Enabled = value;
+                = tbInsSerialNumber.Enabled
+                = tbInsCommodityName.Enabled
+                = tbInsMedicinalMaterialName.Enabled
+                = tbInsSourceArea.Enabled
+                = tbInsRemark.Enabled
+                = tbInsIllustration.Enabled
+                = tbInsMedicineAlias.Enabled = value;
             }
         }
 
@@ -182,13 +182,13 @@ namespace Windows窗体访问中医药数据库
         private void BtInsReset_Click(object sender, EventArgs e)
         {
             tbInsTCMCode.Clear();
-            tbSerialNumber.Clear();
-            tbCommodityName.Clear();
-            tbMedicinalMaterialName.Clear();
-            tbSourceArea.Clear();
-            tbRemark.Clear();
-            tbIllustration.Clear();
-            tbMedicineAlias.Clear();
+            tbInsSerialNumber.Clear();
+            tbInsCommodityName.Clear();
+            tbInsMedicinalMaterialName.Clear();
+            tbInsSourceArea.Clear();
+            tbInsRemark.Clear();
+            tbInsIllustration.Clear();
+            tbInsMedicineAlias.Clear();
             tbInsMessage.Clear();
             btInsMed.Enabled = false;
             lblInsCheckCode.ForeColor = Color.Black;
@@ -203,7 +203,7 @@ namespace Windows窗体访问中医药数据库
             try
             {
                 if (checkInsMedCode && tbInsTCMCode.Text.Substring(14, 2) == "00")
-                    tbMedicinalMaterialName.Text = tbCommodityName.Text;
+                    tbInsMedicinalMaterialName.Text = tbInsCommodityName.Text;
             }
             catch
             {
@@ -216,7 +216,7 @@ namespace Windows窗体访问中医药数据库
         //
         private void BtInsMed_Click(object sender, EventArgs e)
         {
-            if (tbMedicineAlias.Text == "")
+            if (tbInsMedicineAlias.Text == "")
             {
                 if (MessageBox.Show("你确定这味药物没有别名吗？", "录入确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.OK)
                 {
@@ -225,7 +225,7 @@ namespace Windows窗体访问中医药数据库
             }
             InsertTextboxStatus = false;
             tbInsMessage.Clear();
-            if (!checkInsMedCode || tbCommodityName.Text == "" || tbSerialNumber.Text.Length != 5 || (tbRemark.Text != "A" && tbRemark.Text != "B"))
+            if (!checkInsMedCode || tbInsCommodityName.Text == "" || tbInsSerialNumber.Text.Length != 5 || (tbInsRemark.Text != "A" && tbInsRemark.Text != "B"))
             {
                 tbInsMessage.Text = "录入操作不可用！";
                 btInsMed.Enabled = false;
@@ -243,18 +243,28 @@ namespace Windows窗体访问中医药数据库
                     CommandType = CommandType.StoredProcedure
                 };
                 command.Parameters.Add("@TCM_Code", SqlDbType.Char, 17).Value = tbInsTCMCode.Text;                                  //中药代码
-                command.Parameters.Add("@Serial_Num", SqlDbType.Char, 5).Value = tbSerialNumber.Text;                               //顺序号
-                command.Parameters.Add("@Commodity_Name", SqlDbType.VarChar, 50).Value = tbCommodityName.Text;                      //品名
-                command.Parameters.Add("@MedicinalMaterialName", SqlDbType.VarChar, 50).Value = tbMedicinalMaterialName.Text;      //药材名
-                if (tbSourceArea.Text != "")                //若“原产地”不为空，则添加“原产地”参数。
-                    command.Parameters.Add("@SourceArea", SqlDbType.VarChar, 20).Value = tbSourceArea.Text;                         //原产地
-                command.Parameters.Add("@Remark", SqlDbType.Char, 1).Value = tbRemark.Text;                                         //备注
-                if (tbIllustration.Text != "")              //若“说明”不为空，则添加“说明”参数。
-                    command.Parameters.AddWithValue("@Illustration", tbCommodityName.Text);                                         //说明
+                command.Parameters.Add("@Serial_Num", SqlDbType.Char, 5).Value = tbInsSerialNumber.Text;                               //顺序号
+                command.Parameters.Add("@Commodity_Name", SqlDbType.VarChar, 50).Value = tbInsCommodityName.Text;                      //品名
+                command.Parameters.Add("@MedicinalMaterialName", SqlDbType.VarChar, 50).Value = tbInsMedicinalMaterialName.Text;      //药材名
+                if (tbInsSourceArea.Text != "")                //若“原产地”不为空，则添加“原产地”参数。
+                    command.Parameters.Add("@SourceArea", SqlDbType.VarChar, 20).Value = tbInsSourceArea.Text;                         //原产地
+                command.Parameters.Add("@Remark", SqlDbType.Char, 1).Value = tbInsRemark.Text;                                         //备注
+                if (tbInsIllustration.Text != "")              //若“说明”不为空，则添加“说明”参数。
+                    command.Parameters.AddWithValue("@Illustration", tbInsCommodityName.Text);                                         //说明
                 command.Parameters.AddWithValue("@DataConstructer", currentUserName);                                               //数据建设者
                 recordsAffected = command.ExecuteNonQuery();
                 command.Dispose();
-                tbInsMessage.Text += String.Format("已向“药物信息”表单插入数据，{0}行受影响。\r\n", recordsAffected);
+                tbInsMessage.Text += String.Format(@"已向“药物信息”表单插入数据，{0}行受影响。
+
+药物代码：{1}
+顺序号：{2}
+品名：{3}
+药材名：{4}
+原产地：{5}
+备注：{6}
+
+", recordsAffected, tbInsTCMCode.Text, tbInsSerialNumber.Text, tbInsCommodityName.Text, tbInsMedicinalMaterialName.Text, tbInsSourceArea.Text, tbInsRemark.Text);
+
             }
             catch (Exception exc)
             {
@@ -264,9 +274,19 @@ namespace Windows窗体访问中医药数据库
             }
             /***********/
 
-            if (tbMedicineAlias.Text == "")             //若药物别名未添加，则插入操作结束。
+            if (tbInsMedicineAlias.Text == "")             //若药物别名未添加，则插入操作结束。
             {
+                tbInsTCMCode.Clear();
+                tbInsSerialNumber.Clear();
+                tbInsCommodityName.Clear();
+                tbInsMedicinalMaterialName.Clear();
+                tbInsSourceArea.Clear();
+                tbInsRemark.Clear();
+                tbInsIllustration.Clear();
+                tbInsMedicineAlias.Clear();
                 InsertTextboxStatus = true;
+                btInsMed.Enabled = false;
+                lblInsCheckCode.Text = "请输入药物代码。";
                 return;
             }
 
@@ -275,7 +295,7 @@ namespace Windows窗体访问中医药数据库
             storedProcedureName = "Insert_Medicine_Alias";
             try
             {
-                foreach (string medAlias in tbMedicineAlias.Lines)               //获取文本框中的一行内容。
+                foreach (string medAlias in tbInsMedicineAlias.Lines)               //获取文本框中的一行内容。
                 {
                     if (medAlias.Length > 1)                                     //若该行有字符，则将字符内容录入。
                     {
@@ -289,7 +309,12 @@ namespace Windows窗体访问中医药数据库
                         command.Dispose();
                     }
                 }
-                tbInsMessage.Text += String.Format("已向“药物别名”表单插入数据，{0}行受影响。\r\n", recordsAffected);
+                tbInsMessage.Text += String.Format(@"
+已向“药物别名”表单插入数据，{0}行受影响。
+
+{1}
+
+                ", recordsAffected, tbInsMedicineAlias.Text);
             }
             catch (Exception exc)
             {
@@ -299,7 +324,17 @@ namespace Windows窗体访问中医药数据库
             }
             /***********/
 
+            tbInsTCMCode.Clear();
+            tbInsSerialNumber.Clear();
+            tbInsCommodityName.Clear();
+            tbInsMedicinalMaterialName.Clear();
+            tbInsSourceArea.Clear();
+            tbInsRemark.Clear();
+            tbInsIllustration.Clear();
+            tbInsMedicineAlias.Clear();
             InsertTextboxStatus = true;
+            btInsMed.Enabled = false;
+            lblInsCheckCode.Text = "请输入药物代码。";
         }
 
         /************/
@@ -377,7 +412,6 @@ namespace Windows窗体访问中医药数据库
 
             tbDelTCMCode.Enabled = cbDelConfirm.Enabled = true;
         }
-
 
         //
         //重置“删除”标签页。
