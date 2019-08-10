@@ -102,21 +102,22 @@ namespace Windows窗体访问中医药数据库
         {
             HomeBoxStaus = false;
             MainForm mainForm = new MainForm();
-            string connState = mainForm.ConnectToServer(scsb);  //将数据库连接字符串传递给目标窗体。
+            bool connState = mainForm.ConnectToServer(scsb);  //将数据库连接字符串传递给目标窗体。
             lblTip.ForeColor = Color.Black;
-            lblTip.Text = connState;
-            if (connState == "连接建立并已打开！")   //若连接建立成功，则关闭当前窗口，打开新窗口。
+            if (connState)                          //若连接建立成功，则关闭当前窗口，打开新窗口。
             {
                 HomeBoxStaus = true;
                 this.Visible = false;
                 mainForm.ShowDialog();
                 mainForm.Dispose();
                 this.Visible = true;
+                lblTip.Text = "已断开连接。";
                 if (cbLoginMethod.SelectedIndex == 0) tbUID.Enabled = tbPwd.Enabled = false;
             }
             else                                    //若连接建立失败，则解除新窗口的占用。
             {
                 lblTip.ForeColor = Color.Red;
+                lblTip.Text = "连接建立失败！";
                 mainForm.Close();
                 mainForm.Dispose();
                 HomeBoxStaus = true;

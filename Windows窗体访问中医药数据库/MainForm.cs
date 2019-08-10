@@ -31,7 +31,7 @@ namespace Windows窗体访问中医药数据库
         //
         //连接到数据库。
         //
-        public string ConnectToServer(SqlConnectionStringBuilder scsb)
+        public bool ConnectToServer(SqlConnectionStringBuilder scsb)
         {
             tcmConnection = new SqlConnection(scsb.ToString());
             try
@@ -47,13 +47,13 @@ namespace Windows窗体访问中医药数据库
 
                 if (tcmConnection.State == System.Data.ConnectionState.Open)
                 {
-                    return ("连接建立并已打开！");
+                    return (true);
                 }
-                else return ("连接建立失败。");
+                else return (false);
             }
             catch
             {
-                return ("连接建立失败。");
+                return (false);
             }
         }
 
@@ -250,12 +250,11 @@ namespace Windows窗体访问中医药数据库
                     command.Parameters.Add("@SourceArea", SqlDbType.VarChar, 20).Value = tbInsSourceArea.Text;                         //原产地
                 command.Parameters.Add("@Remark", SqlDbType.Char, 1).Value = tbInsRemark.Text;                                         //备注
                 if (tbInsIllustration.Text != "")              //若“说明”不为空，则添加“说明”参数。
-                    command.Parameters.AddWithValue("@Illustration", tbInsCommodityName.Text);                                         //说明
+                    command.Parameters.AddWithValue("@Illustration", tbInsIllustration.Text);                                         //说明
                 command.Parameters.AddWithValue("@DataConstructer", currentUserName);                                               //数据建设者
                 recordsAffected = command.ExecuteNonQuery();
                 command.Dispose();
-                tbInsMessage.Text += String.Format(@"已向“药物信息”表单插入数据，{0}行受影响。
-
+                tbInsMessage.Text += String.Format(@"已向“药物信息”表单插入数据，{0}行受影响：
 药物代码：{1}
 顺序号：{2}
 品名：{3}
@@ -309,12 +308,8 @@ namespace Windows窗体访问中医药数据库
                         command.Dispose();
                     }
                 }
-                tbInsMessage.Text += String.Format(@"
-已向“药物别名”表单插入数据，{0}行受影响。
-
-{1}
-
-                ", recordsAffected, tbInsMedicineAlias.Text);
+                tbInsMessage.Text += String.Format(@"已向“药物别名”表单插入数据，{0}行受影响：
+{1}", recordsAffected, tbInsMedicineAlias.Text);
             }
             catch (Exception exc)
             {
