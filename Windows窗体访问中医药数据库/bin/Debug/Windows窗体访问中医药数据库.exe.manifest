@@ -4,7 +4,7 @@
   <description asmv2:iconFile="School_of_Pharmacy_Transparent_256.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Windows窗体访问中医药数据库" version="0.0.1.3" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Windows窗体访问中医药数据库" version="0.0.2.1" language="neutral" processorArchitecture="msil" />
     <commandLine file="Windows窗体访问中医药数据库.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -16,15 +16,15 @@
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
           UAC 清单选项
-         若想要更改 Windows 用户帐户控制级别，请
-         将 requestedExecutionLevel 节点替换为下述某项。
+          如果要更改 Windows 用户帐户控制级别，请用以下节点之一替换
+          requestedExecutionLevel 节点。
 
-       <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
-       <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
-       <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-        若想要使用文件和注册表虚拟化以实现向后
-        兼容，请删除 requestedExecutionLevel 节点。
+          如果要利用文件和注册表虚拟化提供
+          向后兼容性，请删除 requestedExecutionLevel 节点。
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Windows窗体访问中医药数据库.exe" size="1274840">
-      <assemblyIdentity name="Windows窗体访问中医药数据库" version="0.0.1.3" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Windows窗体访问中医药数据库.exe" size="1290712">
+      <assemblyIdentity name="Windows窗体访问中医药数据库" version="0.0.2.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>U0msrsljQp6eJ+22apbpNrn7LB9XLVwaNI9K27Eo2n0=</dsig:DigestValue>
+        <dsig:DigestValue>O6QU1FxxEnoAkHwYBTJv9+UfhpbEqNNLKFwysGw0SIE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

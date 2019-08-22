@@ -1,0 +1,17 @@
+.wrapper{
+	margin:3% 5%;
+	width:90%;
+	height:60%;
+	border-radius:30px;
+	background:white;
+}
+
+.content{
+	margin:30px;
+	padding-top:10px;
+}
+
+    .content ul li {
+        font-size:24px;
+        overflow-wrap:break-word;
+    }

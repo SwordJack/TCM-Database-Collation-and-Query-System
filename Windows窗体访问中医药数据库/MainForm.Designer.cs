@@ -31,20 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.lblUid = new System.Windows.Forms.Label();
             this.tabCtrlMain = new System.Windows.Forms.TabControl();
-            this.tpSelect = new System.Windows.Forms.TabPage();
-            this.btSelReset = new System.Windows.Forms.Button();
+            this.tpMedSelect = new System.Windows.Forms.TabPage();
+            this.btMedReset = new System.Windows.Forms.Button();
             this.dataGridViewMain1 = new System.Windows.Forms.DataGridView();
             this.btSelMed = new System.Windows.Forms.Button();
             this.dataGridViewMain0 = new System.Windows.Forms.DataGridView();
-            this.tbSelMessage = new System.Windows.Forms.TextBox();
+            this.tbSelMedMessage = new System.Windows.Forms.TextBox();
             this.tbSelMedName = new System.Windows.Forms.TextBox();
             this.lblSelMedName = new System.Windows.Forms.Label();
-            this.tpInsert = new System.Windows.Forms.TabPage();
+            this.tpMedInsert = new System.Windows.Forms.TabPage();
             this.tbInsMessage = new System.Windows.Forms.TextBox();
-            this.btInsReset = new System.Windows.Forms.Button();
+            this.btInsMedReset = new System.Windows.Forms.Button();
             this.btInsMed = new System.Windows.Forms.Button();
             this.tbInsMedicineAlias = new System.Windows.Forms.TextBox();
-            this.lblInsCheckCode = new System.Windows.Forms.Label();
+            this.lblMedInsCheckCode = new System.Windows.Forms.Label();
             this.lblCommodityAliasName = new System.Windows.Forms.Label();
             this.tbInsIllustration = new System.Windows.Forms.TextBox();
             this.tbInsRemark = new System.Windows.Forms.TextBox();
@@ -60,14 +60,55 @@
             this.lblCommodityName = new System.Windows.Forms.Label();
             this.lblSerialNumber = new System.Windows.Forms.Label();
             this.lblInsTCMCode = new System.Windows.Forms.Label();
-            this.tpDelete = new System.Windows.Forms.TabPage();
-            this.btDelReset = new System.Windows.Forms.Button();
-            this.tbDelMessage = new System.Windows.Forms.TextBox();
-            this.cbDelConfirm = new System.Windows.Forms.CheckBox();
+            this.tpMedDelete = new System.Windows.Forms.TabPage();
+            this.btDelMedReset = new System.Windows.Forms.Button();
+            this.tbDelMedMessage = new System.Windows.Forms.TextBox();
+            this.cbDelMedConfirm = new System.Windows.Forms.CheckBox();
             this.btDelMed = new System.Windows.Forms.Button();
             this.lblDelCheckCode = new System.Windows.Forms.Label();
             this.tbDelTCMCode = new System.Windows.Forms.TextBox();
             this.lblDelTCMCode = new System.Windows.Forms.Label();
+            this.tpPreSelect = new System.Windows.Forms.TabPage();
+            this.btSelPreReset = new System.Windows.Forms.Button();
+            this.dataGridViewMain3 = new System.Windows.Forms.DataGridView();
+            this.btSelPre = new System.Windows.Forms.Button();
+            this.dataGridViewMain4 = new System.Windows.Forms.DataGridView();
+            this.tbSelPreMessage = new System.Windows.Forms.TextBox();
+            this.tbSelPreName = new System.Windows.Forms.TextBox();
+            this.lblSelPreName = new System.Windows.Forms.Label();
+            this.tpPreInsert = new System.Windows.Forms.TabPage();
+            this.btSelPreHandlingText = new System.Windows.Forms.Button();
+            this.tbIndication = new System.Windows.Forms.TextBox();
+            this.lblIndication = new System.Windows.Forms.Label();
+            this.tbInsPreMessage = new System.Windows.Forms.TextBox();
+            this.btInsPreReset = new System.Windows.Forms.Button();
+            this.btInsPre = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbInsPreCompatibility = new System.Windows.Forms.TextBox();
+            this.lblInsPreCompatibility = new System.Windows.Forms.Label();
+            this.lblPreInsCheckCode = new System.Windows.Forms.Label();
+            this.tbInsPreIllustration = new System.Windows.Forms.TextBox();
+            this.tbEfficacy = new System.Windows.Forms.TextBox();
+            this.tbPreSource = new System.Windows.Forms.TextBox();
+            this.tbPreName = new System.Windows.Forms.TextBox();
+            this.tbInsPreCode = new System.Windows.Forms.TextBox();
+            this.lblInsPreIllustration = new System.Windows.Forms.Label();
+            this.lblEfficacy = new System.Windows.Forms.Label();
+            this.lblPreSource = new System.Windows.Forms.Label();
+            this.lblPreName = new System.Windows.Forms.Label();
+            this.lblInsPreCode = new System.Windows.Forms.Label();
+            this.dataGridViewPrescriptionAlias = new System.Windows.Forms.DataGridView();
+            this.PrescriptionAlias_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrescriptionAlias_Source = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.illustration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tpPreDelete = new System.Windows.Forms.TabPage();
+            this.btDelPreReset = new System.Windows.Forms.Button();
+            this.tbDelPreMessage = new System.Windows.Forms.TextBox();
+            this.cbDelPreConfirm = new System.Windows.Forms.CheckBox();
+            this.btDelPre = new System.Windows.Forms.Button();
+            this.lblDelPreCheckCode = new System.Windows.Forms.Label();
+            this.tbDelPreCode = new System.Windows.Forms.TextBox();
+            this.lblDelPreCode = new System.Windows.Forms.Label();
             this.tpSelAll = new System.Windows.Forms.TabPage();
             this.tbSAllMessage = new System.Windows.Forms.TextBox();
             this.dataGridViewMain2 = new System.Windows.Forms.DataGridView();
@@ -81,19 +122,27 @@
             this.rbSAllDrugProcessing = new System.Windows.Forms.RadioButton();
             this.rbSAllCuttingSpecification = new System.Windows.Forms.RadioButton();
             this.rbSAllMedicine = new System.Windows.Forms.RadioButton();
-            this.dataSetSel = new System.Data.DataSet();
+            this.dataSetMedSel = new System.Data.DataSet();
             this.dataSetSAll = new System.Data.DataSet();
+            this.dataSetPreSel = new System.Data.DataSet();
             this.tabCtrlMain.SuspendLayout();
-            this.tpSelect.SuspendLayout();
+            this.tpMedSelect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain0)).BeginInit();
-            this.tpInsert.SuspendLayout();
-            this.tpDelete.SuspendLayout();
+            this.tpMedInsert.SuspendLayout();
+            this.tpMedDelete.SuspendLayout();
+            this.tpPreSelect.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain4)).BeginInit();
+            this.tpPreInsert.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrescriptionAlias)).BeginInit();
+            this.tpPreDelete.SuspendLayout();
             this.tpSelAll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetSel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetMedSel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetSAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetPreSel)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUid
@@ -107,9 +156,12 @@
             // 
             // tabCtrlMain
             // 
-            this.tabCtrlMain.Controls.Add(this.tpSelect);
-            this.tabCtrlMain.Controls.Add(this.tpInsert);
-            this.tabCtrlMain.Controls.Add(this.tpDelete);
+            this.tabCtrlMain.Controls.Add(this.tpMedSelect);
+            this.tabCtrlMain.Controls.Add(this.tpMedInsert);
+            this.tabCtrlMain.Controls.Add(this.tpMedDelete);
+            this.tabCtrlMain.Controls.Add(this.tpPreSelect);
+            this.tabCtrlMain.Controls.Add(this.tpPreInsert);
+            this.tabCtrlMain.Controls.Add(this.tpPreDelete);
             this.tabCtrlMain.Controls.Add(this.tpSelAll);
             this.tabCtrlMain.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabCtrlMain.Location = new System.Drawing.Point(15, 53);
@@ -118,34 +170,34 @@
             this.tabCtrlMain.Size = new System.Drawing.Size(857, 456);
             this.tabCtrlMain.TabIndex = 1;
             // 
-            // tpSelect
+            // tpMedSelect
             // 
-            this.tpSelect.Controls.Add(this.btSelReset);
-            this.tpSelect.Controls.Add(this.dataGridViewMain1);
-            this.tpSelect.Controls.Add(this.btSelMed);
-            this.tpSelect.Controls.Add(this.dataGridViewMain0);
-            this.tpSelect.Controls.Add(this.tbSelMessage);
-            this.tpSelect.Controls.Add(this.tbSelMedName);
-            this.tpSelect.Controls.Add(this.lblSelMedName);
-            this.tpSelect.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tpSelect.Location = new System.Drawing.Point(4, 26);
-            this.tpSelect.Name = "tpSelect";
-            this.tpSelect.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSelect.Size = new System.Drawing.Size(849, 426);
-            this.tpSelect.TabIndex = 0;
-            this.tpSelect.Text = "药物全信息查询";
-            this.tpSelect.UseVisualStyleBackColor = true;
+            this.tpMedSelect.Controls.Add(this.btMedReset);
+            this.tpMedSelect.Controls.Add(this.dataGridViewMain1);
+            this.tpMedSelect.Controls.Add(this.btSelMed);
+            this.tpMedSelect.Controls.Add(this.dataGridViewMain0);
+            this.tpMedSelect.Controls.Add(this.tbSelMedMessage);
+            this.tpMedSelect.Controls.Add(this.tbSelMedName);
+            this.tpMedSelect.Controls.Add(this.lblSelMedName);
+            this.tpMedSelect.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tpMedSelect.Location = new System.Drawing.Point(4, 26);
+            this.tpMedSelect.Name = "tpMedSelect";
+            this.tpMedSelect.Padding = new System.Windows.Forms.Padding(3);
+            this.tpMedSelect.Size = new System.Drawing.Size(849, 426);
+            this.tpMedSelect.TabIndex = 0;
+            this.tpMedSelect.Text = "药物全信息查询";
+            this.tpMedSelect.UseVisualStyleBackColor = true;
             // 
-            // btSelReset
+            // btMedReset
             // 
-            this.btSelReset.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btSelReset.Location = new System.Drawing.Point(115, 161);
-            this.btSelReset.Name = "btSelReset";
-            this.btSelReset.Size = new System.Drawing.Size(75, 23);
-            this.btSelReset.TabIndex = 5;
-            this.btSelReset.Text = "重置";
-            this.btSelReset.UseVisualStyleBackColor = true;
-            this.btSelReset.Click += new System.EventHandler(this.BtSelReset_Click);
+            this.btMedReset.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btMedReset.Location = new System.Drawing.Point(115, 161);
+            this.btMedReset.Name = "btMedReset";
+            this.btMedReset.Size = new System.Drawing.Size(75, 23);
+            this.btMedReset.TabIndex = 5;
+            this.btMedReset.Text = "重置";
+            this.btMedReset.UseVisualStyleBackColor = true;
+            this.btMedReset.Click += new System.EventHandler(this.BtSelReset_Click);
             // 
             // dataGridViewMain1
             // 
@@ -178,17 +230,17 @@
             this.dataGridViewMain0.Size = new System.Drawing.Size(837, 223);
             this.dataGridViewMain0.TabIndex = 3;
             // 
-            // tbSelMessage
+            // tbSelMedMessage
             // 
-            this.tbSelMessage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbSelMessage.Location = new System.Drawing.Point(218, 6);
-            this.tbSelMessage.Multiline = true;
-            this.tbSelMessage.Name = "tbSelMessage";
-            this.tbSelMessage.ReadOnly = true;
-            this.tbSelMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbSelMessage.Size = new System.Drawing.Size(198, 189);
-            this.tbSelMessage.TabIndex = 2;
-            this.tbSelMessage.Text = "消息窗口";
+            this.tbSelMedMessage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbSelMedMessage.Location = new System.Drawing.Point(218, 6);
+            this.tbSelMedMessage.Multiline = true;
+            this.tbSelMedMessage.Name = "tbSelMedMessage";
+            this.tbSelMedMessage.ReadOnly = true;
+            this.tbSelMedMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbSelMedMessage.Size = new System.Drawing.Size(198, 189);
+            this.tbSelMedMessage.TabIndex = 2;
+            this.tbSelMedMessage.Text = "消息窗口";
             // 
             // tbSelMedName
             // 
@@ -208,36 +260,36 @@
             this.lblSelMedName.TabIndex = 0;
             this.lblSelMedName.Text = "药物名称：";
             // 
-            // tpInsert
+            // tpMedInsert
             // 
-            this.tpInsert.Controls.Add(this.tbInsMessage);
-            this.tpInsert.Controls.Add(this.btInsReset);
-            this.tpInsert.Controls.Add(this.btInsMed);
-            this.tpInsert.Controls.Add(this.tbInsMedicineAlias);
-            this.tpInsert.Controls.Add(this.lblInsCheckCode);
-            this.tpInsert.Controls.Add(this.lblCommodityAliasName);
-            this.tpInsert.Controls.Add(this.tbInsIllustration);
-            this.tpInsert.Controls.Add(this.tbInsRemark);
-            this.tpInsert.Controls.Add(this.tbInsSourceArea);
-            this.tpInsert.Controls.Add(this.tbInsMedicinalMaterialName);
-            this.tpInsert.Controls.Add(this.tbInsCommodityName);
-            this.tpInsert.Controls.Add(this.tbInsSerialNumber);
-            this.tpInsert.Controls.Add(this.tbInsTCMCode);
-            this.tpInsert.Controls.Add(this.lblIllustration);
-            this.tpInsert.Controls.Add(this.lblRemark);
-            this.tpInsert.Controls.Add(this.lblSourceArea);
-            this.tpInsert.Controls.Add(this.lblMedicinalMaterialName);
-            this.tpInsert.Controls.Add(this.lblCommodityName);
-            this.tpInsert.Controls.Add(this.lblSerialNumber);
-            this.tpInsert.Controls.Add(this.lblInsTCMCode);
-            this.tpInsert.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tpInsert.Location = new System.Drawing.Point(4, 26);
-            this.tpInsert.Name = "tpInsert";
-            this.tpInsert.Padding = new System.Windows.Forms.Padding(3);
-            this.tpInsert.Size = new System.Drawing.Size(849, 426);
-            this.tpInsert.TabIndex = 1;
-            this.tpInsert.Text = "录入";
-            this.tpInsert.UseVisualStyleBackColor = true;
+            this.tpMedInsert.Controls.Add(this.tbInsMessage);
+            this.tpMedInsert.Controls.Add(this.btInsMedReset);
+            this.tpMedInsert.Controls.Add(this.btInsMed);
+            this.tpMedInsert.Controls.Add(this.tbInsMedicineAlias);
+            this.tpMedInsert.Controls.Add(this.lblMedInsCheckCode);
+            this.tpMedInsert.Controls.Add(this.lblCommodityAliasName);
+            this.tpMedInsert.Controls.Add(this.tbInsIllustration);
+            this.tpMedInsert.Controls.Add(this.tbInsRemark);
+            this.tpMedInsert.Controls.Add(this.tbInsSourceArea);
+            this.tpMedInsert.Controls.Add(this.tbInsMedicinalMaterialName);
+            this.tpMedInsert.Controls.Add(this.tbInsCommodityName);
+            this.tpMedInsert.Controls.Add(this.tbInsSerialNumber);
+            this.tpMedInsert.Controls.Add(this.tbInsTCMCode);
+            this.tpMedInsert.Controls.Add(this.lblIllustration);
+            this.tpMedInsert.Controls.Add(this.lblRemark);
+            this.tpMedInsert.Controls.Add(this.lblSourceArea);
+            this.tpMedInsert.Controls.Add(this.lblMedicinalMaterialName);
+            this.tpMedInsert.Controls.Add(this.lblCommodityName);
+            this.tpMedInsert.Controls.Add(this.lblSerialNumber);
+            this.tpMedInsert.Controls.Add(this.lblInsTCMCode);
+            this.tpMedInsert.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tpMedInsert.Location = new System.Drawing.Point(4, 26);
+            this.tpMedInsert.Name = "tpMedInsert";
+            this.tpMedInsert.Padding = new System.Windows.Forms.Padding(3);
+            this.tpMedInsert.Size = new System.Drawing.Size(849, 426);
+            this.tpMedInsert.TabIndex = 1;
+            this.tpMedInsert.Text = "药物信息录入";
+            this.tpMedInsert.UseVisualStyleBackColor = true;
             // 
             // tbInsMessage
             // 
@@ -251,16 +303,16 @@
             this.tbInsMessage.TabIndex = 20;
             this.tbInsMessage.Text = "消息窗口";
             // 
-            // btInsReset
+            // btInsMedReset
             // 
-            this.btInsReset.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btInsReset.Location = new System.Drawing.Point(439, 375);
-            this.btInsReset.Name = "btInsReset";
-            this.btInsReset.Size = new System.Drawing.Size(75, 23);
-            this.btInsReset.TabIndex = 19;
-            this.btInsReset.Text = "重置";
-            this.btInsReset.UseVisualStyleBackColor = true;
-            this.btInsReset.Click += new System.EventHandler(this.BtInsReset_Click);
+            this.btInsMedReset.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btInsMedReset.Location = new System.Drawing.Point(439, 375);
+            this.btInsMedReset.Name = "btInsMedReset";
+            this.btInsMedReset.Size = new System.Drawing.Size(75, 23);
+            this.btInsMedReset.TabIndex = 19;
+            this.btInsMedReset.Text = "重置";
+            this.btInsMedReset.UseVisualStyleBackColor = true;
+            this.btInsMedReset.Click += new System.EventHandler(this.BtInsReset_Click);
             // 
             // btInsMed
             // 
@@ -284,15 +336,15 @@
             this.tbInsMedicineAlias.Size = new System.Drawing.Size(280, 97);
             this.tbInsMedicineAlias.TabIndex = 17;
             // 
-            // lblInsCheckCode
+            // lblMedInsCheckCode
             // 
-            this.lblInsCheckCode.AutoSize = true;
-            this.lblInsCheckCode.Font = new System.Drawing.Font("宋体", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblInsCheckCode.Location = new System.Drawing.Point(116, 59);
-            this.lblInsCheckCode.Name = "lblInsCheckCode";
-            this.lblInsCheckCode.Size = new System.Drawing.Size(101, 12);
-            this.lblInsCheckCode.TabIndex = 16;
-            this.lblInsCheckCode.Text = "请输入药物代码。";
+            this.lblMedInsCheckCode.AutoSize = true;
+            this.lblMedInsCheckCode.Font = new System.Drawing.Font("宋体", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblMedInsCheckCode.Location = new System.Drawing.Point(116, 59);
+            this.lblMedInsCheckCode.Name = "lblMedInsCheckCode";
+            this.lblMedInsCheckCode.Size = new System.Drawing.Size(101, 12);
+            this.lblMedInsCheckCode.TabIndex = 16;
+            this.lblMedInsCheckCode.Text = "请输入药物代码。";
             // 
             // lblCommodityAliasName
             // 
@@ -437,58 +489,58 @@
             this.lblInsTCMCode.TabIndex = 1;
             this.lblInsTCMCode.Text = "药物代码：";
             // 
-            // tpDelete
+            // tpMedDelete
             // 
-            this.tpDelete.Controls.Add(this.btDelReset);
-            this.tpDelete.Controls.Add(this.tbDelMessage);
-            this.tpDelete.Controls.Add(this.cbDelConfirm);
-            this.tpDelete.Controls.Add(this.btDelMed);
-            this.tpDelete.Controls.Add(this.lblDelCheckCode);
-            this.tpDelete.Controls.Add(this.tbDelTCMCode);
-            this.tpDelete.Controls.Add(this.lblDelTCMCode);
-            this.tpDelete.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tpDelete.Location = new System.Drawing.Point(4, 26);
-            this.tpDelete.Name = "tpDelete";
-            this.tpDelete.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDelete.Size = new System.Drawing.Size(849, 426);
-            this.tpDelete.TabIndex = 2;
-            this.tpDelete.Text = "删除";
-            this.tpDelete.UseVisualStyleBackColor = true;
+            this.tpMedDelete.Controls.Add(this.btDelMedReset);
+            this.tpMedDelete.Controls.Add(this.tbDelMedMessage);
+            this.tpMedDelete.Controls.Add(this.cbDelMedConfirm);
+            this.tpMedDelete.Controls.Add(this.btDelMed);
+            this.tpMedDelete.Controls.Add(this.lblDelCheckCode);
+            this.tpMedDelete.Controls.Add(this.tbDelTCMCode);
+            this.tpMedDelete.Controls.Add(this.lblDelTCMCode);
+            this.tpMedDelete.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tpMedDelete.Location = new System.Drawing.Point(4, 26);
+            this.tpMedDelete.Name = "tpMedDelete";
+            this.tpMedDelete.Padding = new System.Windows.Forms.Padding(3);
+            this.tpMedDelete.Size = new System.Drawing.Size(849, 426);
+            this.tpMedDelete.TabIndex = 2;
+            this.tpMedDelete.Text = "药物信息删除";
+            this.tpMedDelete.UseVisualStyleBackColor = true;
             // 
-            // btDelReset
+            // btDelMedReset
             // 
-            this.btDelReset.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btDelReset.Location = new System.Drawing.Point(173, 189);
-            this.btDelReset.Name = "btDelReset";
-            this.btDelReset.Size = new System.Drawing.Size(75, 23);
-            this.btDelReset.TabIndex = 23;
-            this.btDelReset.Text = "重置";
-            this.btDelReset.UseVisualStyleBackColor = true;
-            this.btDelReset.Click += new System.EventHandler(this.BtDelReset_Click);
+            this.btDelMedReset.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btDelMedReset.Location = new System.Drawing.Point(173, 189);
+            this.btDelMedReset.Name = "btDelMedReset";
+            this.btDelMedReset.Size = new System.Drawing.Size(75, 23);
+            this.btDelMedReset.TabIndex = 23;
+            this.btDelMedReset.Text = "重置";
+            this.btDelMedReset.UseVisualStyleBackColor = true;
+            this.btDelMedReset.Click += new System.EventHandler(this.BtDelReset_Click);
             // 
-            // tbDelMessage
+            // tbDelMedMessage
             // 
-            this.tbDelMessage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbDelMessage.Location = new System.Drawing.Point(24, 251);
-            this.tbDelMessage.Multiline = true;
-            this.tbDelMessage.Name = "tbDelMessage";
-            this.tbDelMessage.ReadOnly = true;
-            this.tbDelMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbDelMessage.Size = new System.Drawing.Size(248, 117);
-            this.tbDelMessage.TabIndex = 22;
-            this.tbDelMessage.Text = "消息窗口";
+            this.tbDelMedMessage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbDelMedMessage.Location = new System.Drawing.Point(24, 251);
+            this.tbDelMedMessage.Multiline = true;
+            this.tbDelMedMessage.Name = "tbDelMedMessage";
+            this.tbDelMedMessage.ReadOnly = true;
+            this.tbDelMedMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbDelMedMessage.Size = new System.Drawing.Size(248, 117);
+            this.tbDelMedMessage.TabIndex = 22;
+            this.tbDelMedMessage.Text = "消息窗口";
             // 
-            // cbDelConfirm
+            // cbDelMedConfirm
             // 
-            this.cbDelConfirm.AutoSize = true;
-            this.cbDelConfirm.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbDelConfirm.Location = new System.Drawing.Point(24, 119);
-            this.cbDelConfirm.Name = "cbDelConfirm";
-            this.cbDelConfirm.Size = new System.Drawing.Size(72, 16);
-            this.cbDelConfirm.TabIndex = 21;
-            this.cbDelConfirm.Text = "确认删除";
-            this.cbDelConfirm.UseVisualStyleBackColor = true;
-            this.cbDelConfirm.CheckedChanged += new System.EventHandler(this.BtDelMed_Enabled_Check_Manual);
+            this.cbDelMedConfirm.AutoSize = true;
+            this.cbDelMedConfirm.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbDelMedConfirm.Location = new System.Drawing.Point(24, 119);
+            this.cbDelMedConfirm.Name = "cbDelMedConfirm";
+            this.cbDelMedConfirm.Size = new System.Drawing.Size(72, 16);
+            this.cbDelMedConfirm.TabIndex = 21;
+            this.cbDelMedConfirm.Text = "确认删除";
+            this.cbDelMedConfirm.UseVisualStyleBackColor = true;
+            this.cbDelMedConfirm.CheckedChanged += new System.EventHandler(this.BtDelMed_Enabled_Check_Manual);
             // 
             // btDelMed
             // 
@@ -531,6 +583,452 @@
             this.lblDelTCMCode.Size = new System.Drawing.Size(77, 14);
             this.lblDelTCMCode.TabIndex = 17;
             this.lblDelTCMCode.Text = "药物代码：";
+            // 
+            // tpPreSelect
+            // 
+            this.tpPreSelect.Controls.Add(this.btSelPreReset);
+            this.tpPreSelect.Controls.Add(this.dataGridViewMain3);
+            this.tpPreSelect.Controls.Add(this.btSelPre);
+            this.tpPreSelect.Controls.Add(this.dataGridViewMain4);
+            this.tpPreSelect.Controls.Add(this.tbSelPreMessage);
+            this.tpPreSelect.Controls.Add(this.tbSelPreName);
+            this.tpPreSelect.Controls.Add(this.lblSelPreName);
+            this.tpPreSelect.Location = new System.Drawing.Point(4, 26);
+            this.tpPreSelect.Name = "tpPreSelect";
+            this.tpPreSelect.Padding = new System.Windows.Forms.Padding(3);
+            this.tpPreSelect.Size = new System.Drawing.Size(849, 426);
+            this.tpPreSelect.TabIndex = 6;
+            this.tpPreSelect.Text = "方剂信息查询";
+            this.tpPreSelect.UseVisualStyleBackColor = true;
+            // 
+            // btSelPreReset
+            // 
+            this.btSelPreReset.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btSelPreReset.Location = new System.Drawing.Point(115, 161);
+            this.btSelPreReset.Name = "btSelPreReset";
+            this.btSelPreReset.Size = new System.Drawing.Size(75, 23);
+            this.btSelPreReset.TabIndex = 12;
+            this.btSelPreReset.Text = "重置";
+            this.btSelPreReset.UseVisualStyleBackColor = true;
+            this.btSelPreReset.Click += new System.EventHandler(this.BtSelPreReset_Click);
+            // 
+            // dataGridViewMain3
+            // 
+            this.dataGridViewMain3.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewMain3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMain3.Location = new System.Drawing.Point(422, 6);
+            this.dataGridViewMain3.Name = "dataGridViewMain3";
+            this.dataGridViewMain3.RowTemplate.Height = 23;
+            this.dataGridViewMain3.Size = new System.Drawing.Size(421, 189);
+            this.dataGridViewMain3.TabIndex = 11;
+            // 
+            // btSelPre
+            // 
+            this.btSelPre.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btSelPre.Location = new System.Drawing.Point(21, 161);
+            this.btSelPre.Name = "btSelPre";
+            this.btSelPre.Size = new System.Drawing.Size(75, 23);
+            this.btSelPre.TabIndex = 8;
+            this.btSelPre.Text = "查询";
+            this.btSelPre.UseVisualStyleBackColor = true;
+            this.btSelPre.Click += new System.EventHandler(this.BtSelPre_Click);
+            // 
+            // dataGridViewMain4
+            // 
+            this.dataGridViewMain4.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewMain4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMain4.Location = new System.Drawing.Point(6, 201);
+            this.dataGridViewMain4.Name = "dataGridViewMain4";
+            this.dataGridViewMain4.RowTemplate.Height = 23;
+            this.dataGridViewMain4.Size = new System.Drawing.Size(837, 223);
+            this.dataGridViewMain4.TabIndex = 10;
+            // 
+            // tbSelPreMessage
+            // 
+            this.tbSelPreMessage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbSelPreMessage.Location = new System.Drawing.Point(218, 6);
+            this.tbSelPreMessage.Multiline = true;
+            this.tbSelPreMessage.Name = "tbSelPreMessage";
+            this.tbSelPreMessage.ReadOnly = true;
+            this.tbSelPreMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbSelPreMessage.Size = new System.Drawing.Size(198, 189);
+            this.tbSelPreMessage.TabIndex = 9;
+            this.tbSelPreMessage.Text = "消息窗口";
+            // 
+            // tbSelPreName
+            // 
+            this.tbSelPreName.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbSelPreName.Location = new System.Drawing.Point(102, 49);
+            this.tbSelPreName.Name = "tbSelPreName";
+            this.tbSelPreName.Size = new System.Drawing.Size(100, 23);
+            this.tbSelPreName.TabIndex = 7;
+            // 
+            // lblSelPreName
+            // 
+            this.lblSelPreName.AutoSize = true;
+            this.lblSelPreName.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblSelPreName.Location = new System.Drawing.Point(19, 52);
+            this.lblSelPreName.Name = "lblSelPreName";
+            this.lblSelPreName.Size = new System.Drawing.Size(77, 14);
+            this.lblSelPreName.TabIndex = 6;
+            this.lblSelPreName.Text = "方剂名称：";
+            // 
+            // tpPreInsert
+            // 
+            this.tpPreInsert.Controls.Add(this.btSelPreHandlingText);
+            this.tpPreInsert.Controls.Add(this.tbIndication);
+            this.tpPreInsert.Controls.Add(this.lblIndication);
+            this.tpPreInsert.Controls.Add(this.tbInsPreMessage);
+            this.tpPreInsert.Controls.Add(this.btInsPreReset);
+            this.tpPreInsert.Controls.Add(this.btInsPre);
+            this.tpPreInsert.Controls.Add(this.label1);
+            this.tpPreInsert.Controls.Add(this.tbInsPreCompatibility);
+            this.tpPreInsert.Controls.Add(this.lblInsPreCompatibility);
+            this.tpPreInsert.Controls.Add(this.lblPreInsCheckCode);
+            this.tpPreInsert.Controls.Add(this.tbInsPreIllustration);
+            this.tpPreInsert.Controls.Add(this.tbEfficacy);
+            this.tpPreInsert.Controls.Add(this.tbPreSource);
+            this.tpPreInsert.Controls.Add(this.tbPreName);
+            this.tpPreInsert.Controls.Add(this.tbInsPreCode);
+            this.tpPreInsert.Controls.Add(this.lblInsPreIllustration);
+            this.tpPreInsert.Controls.Add(this.lblEfficacy);
+            this.tpPreInsert.Controls.Add(this.lblPreSource);
+            this.tpPreInsert.Controls.Add(this.lblPreName);
+            this.tpPreInsert.Controls.Add(this.lblInsPreCode);
+            this.tpPreInsert.Controls.Add(this.dataGridViewPrescriptionAlias);
+            this.tpPreInsert.Location = new System.Drawing.Point(4, 26);
+            this.tpPreInsert.Name = "tpPreInsert";
+            this.tpPreInsert.Size = new System.Drawing.Size(849, 426);
+            this.tpPreInsert.TabIndex = 4;
+            this.tpPreInsert.Text = "方剂信息录入";
+            this.tpPreInsert.UseVisualStyleBackColor = true;
+            // 
+            // btSelPreHandlingText
+            // 
+            this.btSelPreHandlingText.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btSelPreHandlingText.Location = new System.Drawing.Point(317, 392);
+            this.btSelPreHandlingText.Name = "btSelPreHandlingText";
+            this.btSelPreHandlingText.Size = new System.Drawing.Size(75, 23);
+            this.btSelPreHandlingText.TabIndex = 36;
+            this.btSelPreHandlingText.Text = "处理文本";
+            this.btSelPreHandlingText.UseVisualStyleBackColor = true;
+            this.btSelPreHandlingText.Click += new System.EventHandler(this.BtSelPreHandlingText_Click);
+            // 
+            // tbIndication
+            // 
+            this.tbIndication.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbIndication.Location = new System.Drawing.Point(110, 232);
+            this.tbIndication.Multiline = true;
+            this.tbIndication.Name = "tbIndication";
+            this.tbIndication.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbIndication.Size = new System.Drawing.Size(203, 89);
+            this.tbIndication.TabIndex = 34;
+            // 
+            // lblIndication
+            // 
+            this.lblIndication.AutoSize = true;
+            this.lblIndication.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblIndication.Location = new System.Drawing.Point(27, 235);
+            this.lblIndication.Name = "lblIndication";
+            this.lblIndication.Size = new System.Drawing.Size(49, 14);
+            this.lblIndication.TabIndex = 35;
+            this.lblIndication.Text = "主治：";
+            // 
+            // tbInsPreMessage
+            // 
+            this.tbInsPreMessage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsPreMessage.Location = new System.Drawing.Point(317, 232);
+            this.tbInsPreMessage.Multiline = true;
+            this.tbInsPreMessage.Name = "tbInsPreMessage";
+            this.tbInsPreMessage.ReadOnly = true;
+            this.tbInsPreMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbInsPreMessage.Size = new System.Drawing.Size(242, 150);
+            this.tbInsPreMessage.TabIndex = 33;
+            this.tbInsPreMessage.Text = "消息窗口";
+            // 
+            // btInsPreReset
+            // 
+            this.btInsPreReset.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btInsPreReset.Location = new System.Drawing.Point(483, 392);
+            this.btInsPreReset.Name = "btInsPreReset";
+            this.btInsPreReset.Size = new System.Drawing.Size(75, 23);
+            this.btInsPreReset.TabIndex = 8;
+            this.btInsPreReset.Text = "重置";
+            this.btInsPreReset.UseVisualStyleBackColor = true;
+            this.btInsPreReset.Click += new System.EventHandler(this.BtInsPreReset_Click);
+            // 
+            // btInsPre
+            // 
+            this.btInsPre.Enabled = false;
+            this.btInsPre.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btInsPre.Location = new System.Drawing.Point(400, 392);
+            this.btInsPre.Name = "btInsPre";
+            this.btInsPre.Size = new System.Drawing.Size(75, 23);
+            this.btInsPre.TabIndex = 7;
+            this.btInsPre.Text = "录入";
+            this.btInsPre.UseVisualStyleBackColor = true;
+            this.btInsPre.Click += new System.EventHandler(this.BtInsPre_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(314, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 14);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "方剂别名信息：";
+            // 
+            // tbInsPreCompatibility
+            // 
+            this.tbInsPreCompatibility.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsPreCompatibility.Location = new System.Drawing.Point(565, 252);
+            this.tbInsPreCompatibility.Multiline = true;
+            this.tbInsPreCompatibility.Name = "tbInsPreCompatibility";
+            this.tbInsPreCompatibility.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbInsPreCompatibility.Size = new System.Drawing.Size(255, 163);
+            this.tbInsPreCompatibility.TabIndex = 6;
+            // 
+            // lblInsPreCompatibility
+            // 
+            this.lblInsPreCompatibility.AutoSize = true;
+            this.lblInsPreCompatibility.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblInsPreCompatibility.Location = new System.Drawing.Point(562, 235);
+            this.lblInsPreCompatibility.Name = "lblInsPreCompatibility";
+            this.lblInsPreCompatibility.Size = new System.Drawing.Size(175, 14);
+            this.lblInsPreCompatibility.TabIndex = 30;
+            this.lblInsPreCompatibility.Text = "组成（换行输入下一个）：";
+            // 
+            // lblPreInsCheckCode
+            // 
+            this.lblPreInsCheckCode.AutoSize = true;
+            this.lblPreInsCheckCode.Font = new System.Drawing.Font("宋体", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblPreInsCheckCode.Location = new System.Drawing.Point(108, 59);
+            this.lblPreInsCheckCode.Name = "lblPreInsCheckCode";
+            this.lblPreInsCheckCode.Size = new System.Drawing.Size(101, 12);
+            this.lblPreInsCheckCode.TabIndex = 29;
+            this.lblPreInsCheckCode.Text = "请输入方剂代码。";
+            // 
+            // tbInsPreIllustration
+            // 
+            this.tbInsPreIllustration.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsPreIllustration.Location = new System.Drawing.Point(110, 327);
+            this.tbInsPreIllustration.Multiline = true;
+            this.tbInsPreIllustration.Name = "tbInsPreIllustration";
+            this.tbInsPreIllustration.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbInsPreIllustration.Size = new System.Drawing.Size(203, 88);
+            this.tbInsPreIllustration.TabIndex = 4;
+            // 
+            // tbEfficacy
+            // 
+            this.tbEfficacy.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbEfficacy.Location = new System.Drawing.Point(110, 174);
+            this.tbEfficacy.Multiline = true;
+            this.tbEfficacy.Name = "tbEfficacy";
+            this.tbEfficacy.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbEfficacy.Size = new System.Drawing.Size(203, 52);
+            this.tbEfficacy.TabIndex = 3;
+            // 
+            // tbPreSource
+            // 
+            this.tbPreSource.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPreSource.Location = new System.Drawing.Point(110, 128);
+            this.tbPreSource.Multiline = true;
+            this.tbPreSource.Name = "tbPreSource";
+            this.tbPreSource.Size = new System.Drawing.Size(143, 40);
+            this.tbPreSource.TabIndex = 2;
+            // 
+            // tbPreName
+            // 
+            this.tbPreName.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPreName.Location = new System.Drawing.Point(110, 82);
+            this.tbPreName.MaxLength = 25;
+            this.tbPreName.Multiline = true;
+            this.tbPreName.Name = "tbPreName";
+            this.tbPreName.Size = new System.Drawing.Size(143, 40);
+            this.tbPreName.TabIndex = 1;
+            // 
+            // tbInsPreCode
+            // 
+            this.tbInsPreCode.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsPreCode.Location = new System.Drawing.Point(110, 33);
+            this.tbInsPreCode.MaxLength = 10;
+            this.tbInsPreCode.Name = "tbInsPreCode";
+            this.tbInsPreCode.Size = new System.Drawing.Size(143, 23);
+            this.tbInsPreCode.TabIndex = 0;
+            this.tbInsPreCode.Leave += new System.EventHandler(this.TbInsPreCode_Leave);
+            // 
+            // lblInsPreIllustration
+            // 
+            this.lblInsPreIllustration.AutoSize = true;
+            this.lblInsPreIllustration.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblInsPreIllustration.Location = new System.Drawing.Point(27, 330);
+            this.lblInsPreIllustration.Name = "lblInsPreIllustration";
+            this.lblInsPreIllustration.Size = new System.Drawing.Size(49, 14);
+            this.lblInsPreIllustration.TabIndex = 21;
+            this.lblInsPreIllustration.Text = "说明：";
+            // 
+            // lblEfficacy
+            // 
+            this.lblEfficacy.AutoSize = true;
+            this.lblEfficacy.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblEfficacy.Location = new System.Drawing.Point(27, 177);
+            this.lblEfficacy.Name = "lblEfficacy";
+            this.lblEfficacy.Size = new System.Drawing.Size(49, 14);
+            this.lblEfficacy.TabIndex = 20;
+            this.lblEfficacy.Text = "功效：";
+            // 
+            // lblPreSource
+            // 
+            this.lblPreSource.AutoSize = true;
+            this.lblPreSource.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblPreSource.Location = new System.Drawing.Point(27, 131);
+            this.lblPreSource.Name = "lblPreSource";
+            this.lblPreSource.Size = new System.Drawing.Size(49, 14);
+            this.lblPreSource.TabIndex = 19;
+            this.lblPreSource.Text = "来源：";
+            // 
+            // lblPreName
+            // 
+            this.lblPreName.AutoSize = true;
+            this.lblPreName.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblPreName.Location = new System.Drawing.Point(27, 85);
+            this.lblPreName.Name = "lblPreName";
+            this.lblPreName.Size = new System.Drawing.Size(49, 14);
+            this.lblPreName.TabIndex = 18;
+            this.lblPreName.Text = "方名：";
+            // 
+            // lblInsPreCode
+            // 
+            this.lblInsPreCode.AutoSize = true;
+            this.lblInsPreCode.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblInsPreCode.Location = new System.Drawing.Point(27, 36);
+            this.lblInsPreCode.Name = "lblInsPreCode";
+            this.lblInsPreCode.Size = new System.Drawing.Size(77, 14);
+            this.lblInsPreCode.TabIndex = 17;
+            this.lblInsPreCode.Text = "方剂代码：";
+            // 
+            // dataGridViewPrescriptionAlias
+            // 
+            this.dataGridViewPrescriptionAlias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPrescriptionAlias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PrescriptionAlias_Name,
+            this.PrescriptionAlias_Source,
+            this.illustration});
+            this.dataGridViewPrescriptionAlias.Location = new System.Drawing.Point(425, 33);
+            this.dataGridViewPrescriptionAlias.Name = "dataGridViewPrescriptionAlias";
+            this.dataGridViewPrescriptionAlias.RowTemplate.Height = 23;
+            this.dataGridViewPrescriptionAlias.Size = new System.Drawing.Size(395, 180);
+            this.dataGridViewPrescriptionAlias.TabIndex = 5;
+            // 
+            // PrescriptionAlias_Name
+            // 
+            this.PrescriptionAlias_Name.HeaderText = "方剂别名";
+            this.PrescriptionAlias_Name.Name = "PrescriptionAlias_Name";
+            // 
+            // PrescriptionAlias_Source
+            // 
+            this.PrescriptionAlias_Source.HeaderText = "别名出处";
+            this.PrescriptionAlias_Source.Name = "PrescriptionAlias_Source";
+            // 
+            // illustration
+            // 
+            this.illustration.HeaderText = "说明";
+            this.illustration.Name = "illustration";
+            this.illustration.Width = 150;
+            // 
+            // tpPreDelete
+            // 
+            this.tpPreDelete.Controls.Add(this.btDelPreReset);
+            this.tpPreDelete.Controls.Add(this.tbDelPreMessage);
+            this.tpPreDelete.Controls.Add(this.cbDelPreConfirm);
+            this.tpPreDelete.Controls.Add(this.btDelPre);
+            this.tpPreDelete.Controls.Add(this.lblDelPreCheckCode);
+            this.tpPreDelete.Controls.Add(this.tbDelPreCode);
+            this.tpPreDelete.Controls.Add(this.lblDelPreCode);
+            this.tpPreDelete.Location = new System.Drawing.Point(4, 26);
+            this.tpPreDelete.Name = "tpPreDelete";
+            this.tpPreDelete.Size = new System.Drawing.Size(849, 426);
+            this.tpPreDelete.TabIndex = 5;
+            this.tpPreDelete.Text = "方剂信息删除";
+            this.tpPreDelete.UseVisualStyleBackColor = true;
+            // 
+            // btDelPreReset
+            // 
+            this.btDelPreReset.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btDelPreReset.Location = new System.Drawing.Point(173, 189);
+            this.btDelPreReset.Name = "btDelPreReset";
+            this.btDelPreReset.Size = new System.Drawing.Size(75, 23);
+            this.btDelPreReset.TabIndex = 30;
+            this.btDelPreReset.Text = "重置";
+            this.btDelPreReset.UseVisualStyleBackColor = true;
+            this.btDelPreReset.Click += new System.EventHandler(this.BtDelPreReset_Click);
+            // 
+            // tbDelPreMessage
+            // 
+            this.tbDelPreMessage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbDelPreMessage.Location = new System.Drawing.Point(24, 251);
+            this.tbDelPreMessage.Multiline = true;
+            this.tbDelPreMessage.Name = "tbDelPreMessage";
+            this.tbDelPreMessage.ReadOnly = true;
+            this.tbDelPreMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbDelPreMessage.Size = new System.Drawing.Size(248, 117);
+            this.tbDelPreMessage.TabIndex = 29;
+            this.tbDelPreMessage.Text = "消息窗口";
+            // 
+            // cbDelPreConfirm
+            // 
+            this.cbDelPreConfirm.AutoSize = true;
+            this.cbDelPreConfirm.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbDelPreConfirm.Location = new System.Drawing.Point(24, 119);
+            this.cbDelPreConfirm.Name = "cbDelPreConfirm";
+            this.cbDelPreConfirm.Size = new System.Drawing.Size(72, 16);
+            this.cbDelPreConfirm.TabIndex = 28;
+            this.cbDelPreConfirm.Text = "确认删除";
+            this.cbDelPreConfirm.UseVisualStyleBackColor = true;
+            this.cbDelPreConfirm.CheckedChanged += new System.EventHandler(this.BtDelPre_Enabled_Check_Manual);
+            // 
+            // btDelPre
+            // 
+            this.btDelPre.Enabled = false;
+            this.btDelPre.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btDelPre.Location = new System.Drawing.Point(24, 189);
+            this.btDelPre.Name = "btDelPre";
+            this.btDelPre.Size = new System.Drawing.Size(75, 23);
+            this.btDelPre.TabIndex = 27;
+            this.btDelPre.Text = "删除";
+            this.btDelPre.UseVisualStyleBackColor = true;
+            this.btDelPre.Click += new System.EventHandler(this.BtDelPre_Click);
+            // 
+            // lblDelPreCheckCode
+            // 
+            this.lblDelPreCheckCode.AutoSize = true;
+            this.lblDelPreCheckCode.Font = new System.Drawing.Font("宋体", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblDelPreCheckCode.Location = new System.Drawing.Point(103, 57);
+            this.lblDelPreCheckCode.Name = "lblDelPreCheckCode";
+            this.lblDelPreCheckCode.Size = new System.Drawing.Size(101, 12);
+            this.lblDelPreCheckCode.TabIndex = 26;
+            this.lblDelPreCheckCode.Text = "请输入方剂代码。";
+            // 
+            // tbDelPreCode
+            // 
+            this.tbDelPreCode.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbDelPreCode.Location = new System.Drawing.Point(105, 31);
+            this.tbDelPreCode.MaxLength = 10;
+            this.tbDelPreCode.Name = "tbDelPreCode";
+            this.tbDelPreCode.Size = new System.Drawing.Size(143, 23);
+            this.tbDelPreCode.TabIndex = 25;
+            this.tbDelPreCode.Leave += new System.EventHandler(this.BtDelPre_Enabled_Check_Manual);
+            // 
+            // lblDelPreCode
+            // 
+            this.lblDelPreCode.AutoSize = true;
+            this.lblDelPreCode.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblDelPreCode.Location = new System.Drawing.Point(22, 34);
+            this.lblDelPreCode.Name = "lblDelPreCode";
+            this.lblDelPreCode.Size = new System.Drawing.Size(77, 14);
+            this.lblDelPreCode.TabIndex = 24;
+            this.lblDelPreCode.Text = "方剂代码：";
             // 
             // tpSelAll
             // 
@@ -692,13 +1190,17 @@
             this.rbSAllMedicine.UseVisualStyleBackColor = true;
             this.rbSAllMedicine.CheckedChanged += new System.EventHandler(this.RbSAllOption_CheckedChanged);
             // 
-            // dataSetSel
+            // dataSetMedSel
             // 
-            this.dataSetSel.DataSetName = "DataSetSel";
+            this.dataSetMedSel.DataSetName = "DataSetMedSel";
             // 
             // dataSetSAll
             // 
             this.dataSetSAll.DataSetName = "DataSetSAll";
+            // 
+            // dataSetPreSel
+            // 
+            this.dataSetPreSel.DataSetName = "dataSetPreSel";
             // 
             // MainForm
             // 
@@ -715,21 +1217,31 @@
             this.Text = "中医药数据库整理";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.tabCtrlMain.ResumeLayout(false);
-            this.tpSelect.ResumeLayout(false);
-            this.tpSelect.PerformLayout();
+            this.tpMedSelect.ResumeLayout(false);
+            this.tpMedSelect.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain0)).EndInit();
-            this.tpInsert.ResumeLayout(false);
-            this.tpInsert.PerformLayout();
-            this.tpDelete.ResumeLayout(false);
-            this.tpDelete.PerformLayout();
+            this.tpMedInsert.ResumeLayout(false);
+            this.tpMedInsert.PerformLayout();
+            this.tpMedDelete.ResumeLayout(false);
+            this.tpMedDelete.PerformLayout();
+            this.tpPreSelect.ResumeLayout(false);
+            this.tpPreSelect.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain4)).EndInit();
+            this.tpPreInsert.ResumeLayout(false);
+            this.tpPreInsert.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrescriptionAlias)).EndInit();
+            this.tpPreDelete.ResumeLayout(false);
+            this.tpPreDelete.PerformLayout();
             this.tpSelAll.ResumeLayout(false);
             this.tpSelAll.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetSel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetMedSel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetSAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetPreSel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -739,16 +1251,16 @@
 
         private System.Windows.Forms.Label lblUid;
         private System.Windows.Forms.TabControl tabCtrlMain;
-        private System.Windows.Forms.TabPage tpSelect;
-        private System.Windows.Forms.TabPage tpInsert;
-        private System.Windows.Forms.TextBox tbSelMessage;
-        private System.Data.DataSet dataSetSel;
+        private System.Windows.Forms.TabPage tpMedSelect;
+        private System.Windows.Forms.TabPage tpMedInsert;
+        private System.Windows.Forms.TextBox tbSelMedMessage;
+        private System.Data.DataSet dataSetMedSel;
         private System.Windows.Forms.DataGridView dataGridViewMain0;
         private System.Windows.Forms.Button btSelMed;
         private System.Windows.Forms.TextBox tbSelMedName;
         private System.Windows.Forms.Label lblSelMedName;
         private System.Windows.Forms.DataGridView dataGridViewMain1;
-        private System.Windows.Forms.Button btSelReset;
+        private System.Windows.Forms.Button btMedReset;
         private System.Windows.Forms.TextBox tbInsSerialNumber;
         private System.Windows.Forms.TextBox tbInsTCMCode;
         private System.Windows.Forms.Label lblIllustration;
@@ -764,19 +1276,19 @@
         private System.Windows.Forms.TextBox tbInsSourceArea;
         private System.Windows.Forms.TextBox tbInsMedicinalMaterialName;
         private System.Windows.Forms.TextBox tbInsCommodityName;
-        private System.Windows.Forms.Label lblInsCheckCode;
+        private System.Windows.Forms.Label lblMedInsCheckCode;
         private System.Windows.Forms.TextBox tbInsMedicineAlias;
-        private System.Windows.Forms.Button btInsReset;
+        private System.Windows.Forms.Button btInsMedReset;
         private System.Windows.Forms.Button btInsMed;
         private System.Windows.Forms.TextBox tbInsMessage;
-        private System.Windows.Forms.TabPage tpDelete;
+        private System.Windows.Forms.TabPage tpMedDelete;
         private System.Windows.Forms.Label lblDelCheckCode;
         private System.Windows.Forms.TextBox tbDelTCMCode;
         private System.Windows.Forms.Label lblDelTCMCode;
         private System.Windows.Forms.Button btDelMed;
-        private System.Windows.Forms.CheckBox cbDelConfirm;
-        private System.Windows.Forms.TextBox tbDelMessage;
-        private System.Windows.Forms.Button btDelReset;
+        private System.Windows.Forms.CheckBox cbDelMedConfirm;
+        private System.Windows.Forms.TextBox tbDelMedMessage;
+        private System.Windows.Forms.Button btDelMedReset;
         private System.Windows.Forms.TabPage tpSelAll;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton rbSAllMedicine;
@@ -791,5 +1303,47 @@
         private System.Data.DataSet dataSetSAll;
         private System.Windows.Forms.TextBox tbSAllMessage;
         private System.Windows.Forms.Button btSAllReset;
+        private System.Windows.Forms.TabPage tpPreInsert;
+        private System.Windows.Forms.TabPage tpPreDelete;
+        private System.Windows.Forms.DataGridView dataGridViewPrescriptionAlias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrescriptionAlias_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrescriptionAlias_Source;
+        private System.Windows.Forms.DataGridViewTextBoxColumn illustration;
+        private System.Windows.Forms.TabPage tpPreSelect;
+        private System.Windows.Forms.Button btSelPreReset;
+        private System.Windows.Forms.DataGridView dataGridViewMain3;
+        private System.Windows.Forms.Button btSelPre;
+        private System.Windows.Forms.DataGridView dataGridViewMain4;
+        private System.Windows.Forms.TextBox tbSelPreMessage;
+        private System.Windows.Forms.TextBox tbSelPreName;
+        private System.Windows.Forms.Label lblSelPreName;
+        private System.Windows.Forms.Label lblPreInsCheckCode;
+        private System.Windows.Forms.TextBox tbInsPreIllustration;
+        private System.Windows.Forms.TextBox tbEfficacy;
+        private System.Windows.Forms.TextBox tbPreSource;
+        private System.Windows.Forms.TextBox tbPreName;
+        private System.Windows.Forms.TextBox tbInsPreCode;
+        private System.Windows.Forms.Label lblInsPreIllustration;
+        private System.Windows.Forms.Label lblEfficacy;
+        private System.Windows.Forms.Label lblPreSource;
+        private System.Windows.Forms.Label lblPreName;
+        private System.Windows.Forms.Label lblInsPreCode;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbInsPreCompatibility;
+        private System.Windows.Forms.Label lblInsPreCompatibility;
+        private System.Windows.Forms.Button btInsPreReset;
+        private System.Windows.Forms.Button btInsPre;
+        private System.Windows.Forms.TextBox tbInsPreMessage;
+        private System.Windows.Forms.TextBox tbIndication;
+        private System.Windows.Forms.Label lblIndication;
+        private System.Data.DataSet dataSetPreSel;
+        private System.Windows.Forms.Button btDelPreReset;
+        private System.Windows.Forms.TextBox tbDelPreMessage;
+        private System.Windows.Forms.CheckBox cbDelPreConfirm;
+        private System.Windows.Forms.Button btDelPre;
+        private System.Windows.Forms.Label lblDelPreCheckCode;
+        private System.Windows.Forms.TextBox tbDelPreCode;
+        private System.Windows.Forms.Label lblDelPreCode;
+        private System.Windows.Forms.Button btSelPreHandlingText;
     }
 }

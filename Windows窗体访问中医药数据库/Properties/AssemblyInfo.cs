@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("中医药数据库整理（客户端）")]
-[assembly: AssemblyDescription("本应用及其相关内容不用于且不可以任何理由用于任何商业目的；作者对本应用的使用不收取任何费用，不担负任何责任。")]
+[assembly: AssemblyDescription("本应用及其相关内容不用于且不可以任何理由用于任何商业目的；作者对其使用不收取任何费用，对其造成之后果不担负任何责任。")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("华东理工大学药学院大学生暑期社会实践团")]
 [assembly: AssemblyProduct("中医药数据库整理（客户端，Windows窗体应用程序）")]
@@ -33,7 +33,7 @@ using System.Runtime.InteropServices;
 //可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值
 //通过使用 "*"，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.0.1.3")]
-[assembly: AssemblyFileVersion("0.0.1.5")]
+[assembly: AssemblyVersion("0.0.2.1")]
+[assembly: AssemblyFileVersion("0.0.2.1")]
 [assembly: NeutralResourcesLanguage("zh-CN")]
 

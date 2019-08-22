@@ -96,7 +96,7 @@
             this.lblInstruction.Size = new System.Drawing.Size(353, 48);
             this.lblInstruction.TabIndex = 3;
             this.lblInstruction.Text = "CopyLeft 2019 - Forever, Zhong Y. Jie.\r\nPartial Rights Reserved, Licensed Under G" +
-    "NU GPL v3.\r\n本应用及其相关内容不用于且不可以任何理由用于任何商业目的；\r\n作者对本应用的使用不收取任何费用，不担负任何责任。";
+    "NU GPL v3.\r\n本应用及其相关内容不用于且不可以任何理由用于任何商业目的；\r\n作者对其使用不收取任何费用，对其造成之后果不担负任何责任。";
             // 
             // timerEntrance
             // 
