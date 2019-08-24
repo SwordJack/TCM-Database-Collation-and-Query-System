@@ -1,4 +1,4 @@
-﻿namespace Windows窗体访问中医药数据库
+﻿namespace 中医药数据库查询
 {
     partial class HomeForm
     {

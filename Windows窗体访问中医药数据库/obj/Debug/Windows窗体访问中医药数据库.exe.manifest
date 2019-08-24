@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Windows窗体访问中医药数据库.exe" size="1290712">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Windows窗体访问中医药数据库.exe" size="1292248">
       <assemblyIdentity name="Windows窗体访问中医药数据库" version="0.0.2.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>O6QU1FxxEnoAkHwYBTJv9+UfhpbEqNNLKFwysGw0SIE=</dsig:DigestValue>
+        <dsig:DigestValue>/2SCTLwEDFFtHFuw1FKhkoOb40/nmP8oX+is/ibINOQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

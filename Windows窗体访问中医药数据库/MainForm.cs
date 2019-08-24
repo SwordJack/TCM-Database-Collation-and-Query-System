@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using TCMServerConstructionAuxiliary;
 
-namespace Windows窗体访问中医药数据库
+namespace 中医药数据库查询
 {
     
     public partial class MainForm : Form
@@ -563,7 +563,8 @@ namespace Windows窗体访问中医药数据库
 
         #region 插入方剂信息
 
-        bool checkInsPreCode;   //待插入表中的方剂代码是否匹配。
+        bool checkInsPreCode;       //待插入表中的方剂代码是否匹配。
+        int handleTextCount = 0;    //记录处理文本的次数，每点击一次“处理文本”则加一，每点击“录入”则归零。
 
         //
         //文本框的可用性，用于在运行数据库语句期间对文本框进行冻结。
@@ -623,14 +624,14 @@ namespace Windows窗体访问中医药数据库
             }
             InsertPreTextboxStatus = false;
             tbInsPreMessage.Clear();
-            if (!checkInsPreCode || tbPreName.Text == "" || tbPreSource.Text == "")
+            if (!checkInsPreCode || tbPreName.Text == "" || tbPreSource.Text == "" || tbInsPreCompatibility.Text == "" || handleTextCount < 1)
             {
                 tbInsPreMessage.Text = "录入操作不可用！";
-                btInsPre.Enabled = false;
                 InsertPreTextboxStatus = true;
                 return;
             }
             int recordsAffected;
+            handleTextCount = 0;
 
             /***方剂基本信息（Prescription）录入***/
             storedProcedureName = "Insert_Prescription_Information";
@@ -793,38 +794,68 @@ namespace Windows窗体访问中医药数据库
         private void BtSelPreHandlingText_Click(object sender, EventArgs e)
         {
             /***处理换行***/
-            tbSelPreName.Text = tbSelPreName.Text.Replace("\r\n", "");
+            tbPreName.Text = tbPreName.Text.Replace("\r\n", "");
             tbPreSource.Text = tbPreSource.Text.Replace("\r\n", "");
             tbEfficacy.Text = tbEfficacy.Text.Replace("\r\n", "");
             tbIndication.Text = tbIndication.Text.Replace("\r\n", "");
+            tbInsPreIllustration.Text = tbInsPreIllustration.Text.Replace("\r\n", "");
 
             /***处理英文逗号***/
-            tbSelPreName.Text = tbSelPreName.Text.Replace(',', '，');
+            tbPreName.Text = tbPreName.Text.Replace(',', '，');
             tbEfficacy.Text = tbEfficacy.Text.Replace(',', '，');
             tbIndication.Text = tbIndication.Text.Replace(',', '，');
+            tbInsPreIllustration.Text = tbInsPreIllustration.Text.Replace(',', '，');
 
             /***处理英文分号***/
             tbEfficacy.Text = tbEfficacy.Text.Replace(';', '；');
             tbIndication.Text = tbIndication.Text.Replace(';', '；');
+            tbInsPreIllustration.Text = tbInsPreIllustration.Text.Replace(';', '；');
 
             /***处理无意义空格***/
-            tbSelPreName.Text = tbSelPreName.Text.Replace(" ", "");
+            tbPreName.Text = tbPreName.Text.Replace(" ", "");
             tbPreSource.Text = tbPreSource.Text.Replace(" ", "");
             tbEfficacy.Text = tbEfficacy.Text.Replace(" ", "");
             tbIndication.Text = tbIndication.Text.Replace(" ", "");
+            tbInsPreIllustration.Text = tbInsPreIllustration.Text.Replace(" ", "");
+
+            /***处理英文括号***/
+            tbPreName.Text = tbPreName.Text.Replace("(", "（").Replace(")", "）");
+            tbPreSource.Text = tbPreSource.Text.Replace("(", "（").Replace(")", "）");
+            tbEfficacy.Text = tbEfficacy.Text.Replace("(", "（").Replace(")", "）");
+            tbIndication.Text = tbIndication.Text.Replace("(", "（").Replace(")", "）");
+            tbInsPreIllustration.Text = tbInsPreIllustration.Text.Replace("(", "（").Replace(")", "）");
 
             /***处理英文句号***/
-            tbSelPreName.Text = tbSelPreName.Text.Replace(".", "");
+            tbPreName.Text = tbPreName.Text.Replace(".", "");
             tbEfficacy.Text = tbEfficacy.Text.Replace(".", "");
             tbIndication.Text = tbIndication.Text.Replace(".", "");
+            tbInsPreIllustration.Text = tbInsPreIllustration.Text.Replace(".", "");
 
             /***处理书名号***/
             tbPreSource.Text = tbPreSource.Text.Replace("《", "");
             tbPreSource.Text = tbPreSource.Text.Replace("》", "");
 
             /***句尾加上中文句号***/
-            if (tbEfficacy.Text.Substring(tbEfficacy.Text.Length - 1, 1) != "。") tbEfficacy.Text += "。";
-            if (tbIndication.Text.Substring(tbIndication.Text.Length - 1, 1) != "。") tbIndication.Text += "。";
+            if (tbEfficacy.Text.Length > 0 && tbEfficacy.Text.Substring(tbEfficacy.Text.Length - 1, 1) != "。") tbEfficacy.Text += "。";
+            if (tbIndication.Text.Length > 0 && tbIndication.Text.Substring(tbIndication.Text.Length - 1, 1) != "。") tbIndication.Text += "。";
+            if (tbInsPreIllustration.Text.Length > 0 && tbInsPreIllustration.Text.Substring(tbInsPreIllustration.Text.Length - 1, 1) != "。") tbInsPreIllustration.Text += "。";
+
+            /***处理方剂别名DataGridView中文字***/
+            int aliasCount = dataGridViewPrescriptionAlias.Rows.Count;
+            for (int i = 0; i < aliasCount; i++)
+            {
+                if (dataGridViewPrescriptionAlias[0, i].Value != null)
+                {
+                    if (dataGridViewPrescriptionAlias[0, i].Value != null)
+                        dataGridViewPrescriptionAlias[0, i].Value = dataGridViewPrescriptionAlias[0, i].Value.ToString().Replace("\r\n", "").Replace("《", "").Replace("》", "").Replace("“", "").Replace("”", "").Replace("(", "").Replace(")", "");
+                    if (dataGridViewPrescriptionAlias[1, i].Value != null)
+                        dataGridViewPrescriptionAlias[1, i].Value = dataGridViewPrescriptionAlias[1, i].Value.ToString().Replace("\r\n", "").Replace("《", "").Replace("》", "").Replace("“", "").Replace("”", "").Replace("(", "").Replace(")", "");
+                    if (dataGridViewPrescriptionAlias[2, i].Value != null)
+                        dataGridViewPrescriptionAlias[2, i].Value = dataGridViewPrescriptionAlias[2, i].Value.ToString().Replace("“", "").Replace("”", "").Replace("(", "").Replace(")", "");
+                }
+            }
+
+            handleTextCount++;   //文本处理次数加一。
         }
 
         #endregion

@@ -1,4 +1,4 @@
-﻿namespace Windows窗体访问中医药数据库
+﻿namespace 中医药数据库查询
 {
     partial class EntranceForm
     {
@@ -66,7 +66,7 @@
             // 
             this.pbInstitution.BackColor = System.Drawing.Color.Transparent;
             this.pbInstitution.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbInstitution.Image = global::Windows窗体访问中医药数据库.Properties.Resources.Badge_White_Reversed;
+            this.pbInstitution.Image = global::中医药数据库查询.Properties.Resources.Badge_White_Reversed;
             this.pbInstitution.Location = new System.Drawing.Point(5, 5);
             this.pbInstitution.Name = "pbInstitution";
             this.pbInstitution.Size = new System.Drawing.Size(55, 55);

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace Windows窗体访问中医药数据库
+namespace 中医药数据库查询
 {
     public partial class HomeForm : Form
     {
