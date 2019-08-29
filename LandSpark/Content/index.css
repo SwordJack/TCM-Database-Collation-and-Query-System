@@ -34,7 +34,7 @@ body{
     font-weight:700;
 }
 
-.search-button {
+.introduction-button {
     margin-top: 24vh;
     margin-left: 42vw;
     width: 16vw;
@@ -42,7 +42,7 @@ body{
     font-size: x-large;
 }
 
-.introduction-button {
+.search-button {
     margin-top: 6vh;
     margin-left: 42vw;
     width: 16vw;
@@ -54,7 +54,7 @@ body{
     position: absolute;
     bottom: 0px;
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     text-align: center;
     color:white;
     background: #474253;

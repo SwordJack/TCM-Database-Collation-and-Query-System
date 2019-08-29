@@ -63,9 +63,9 @@ namespace 中医药数据库查询.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap Badge_White {
+        internal static System.Drawing.Bitmap Badge_White_Reversed {
             get {
-                object obj = ResourceManager.GetObject("Badge_White", resourceCulture);
+                object obj = ResourceManager.GetObject("Badge_White_Reversed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace 中医药数据库查询.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap Badge_White_Reversed {
+        internal static System.Drawing.Bitmap GPL_v3_Grey {
             get {
-                object obj = ResourceManager.GetObject("Badge_White_Reversed", resourceCulture);
+                object obj = ResourceManager.GetObject("GPL_v3_Grey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

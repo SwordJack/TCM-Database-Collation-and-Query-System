@@ -4,7 +4,7 @@
   <description asmv2:iconFile="School_of_Pharmacy_Transparent_256.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="中医药数据库查询" version="1.0.2.1" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="中医药数据库查询" version="1.0.2.4" language="neutral" processorArchitecture="msil" />
     <commandLine file="中医药数据库查询.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,38 +43,17 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TCMServerConstructionAuxiliary.dll" size="4608">
-      <assemblyIdentity name="TCMServerConstructionAuxiliary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="中医药数据库查询.exe" size="1199064">
+      <assemblyIdentity name="中医药数据库查询" version="1.0.2.4" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2FtFJLSo2O8WIjFoeWFeqSSrdmb1JQ8SFqHlGdXXyOc=</dsig:DigestValue>
+        <dsig:DigestValue>9LgFUP6DeX7rQsxwMnIhZioDfgH3GjCHcZmKCZkNG+Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="中医药数据库查询.exe" size="1287640">
-      <assemblyIdentity name="中医药数据库查询" version="1.0.2.1" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GNk2GN9FeASmKUKhxr7MHdIpKNijvkc04IIupAaHtrg=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <file name="Resources\Images\ECUST\School_of_Pharmacy_Transparent.png" size="99534">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>tjUZhs2aIc+eUW4gaKkvqgiK40ljmJbMverooegfcJA=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="Resources\Images\ECUST\School_of_Pharmacy_Transparent_256.ico" size="270398">
     <hash>
       <dsig:Transforms>

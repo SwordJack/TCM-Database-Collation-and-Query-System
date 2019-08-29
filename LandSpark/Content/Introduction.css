@@ -48,14 +48,24 @@ body {
 }
 
     .content ul li {
-        font-size:24px;
+        font-size:20px;
         overflow-wrap:break-word;
-    }
+    }   /*列表中之文字。*/
+
+    .content dl dt {
+        font-size: 24px;
+        overflow-wrap: break-word;
+    }   /*标题下之文字。*/
+
+    .content dl dd {
+        font-size: 18px;
+        overflow-wrap: break-word;
+    }   /*结尾p.s.文字。*/
 
 .footer {
     position: absolute;
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     text-align: center;
     color: white;
     background: #474253;

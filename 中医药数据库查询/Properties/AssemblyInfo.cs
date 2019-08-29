@@ -6,13 +6,13 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("中医药数据库整理（客户端）")]
+[assembly: AssemblyTitle("中医药数据库查询（客户端）")]
 [assembly: AssemblyDescription("本应用及其相关内容不用于且不可以任何理由用于任何商业目的；作者对其使用不收取任何费用，对其造成之后果不担负任何责任。")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("华东理工大学药学院大学生暑期社会实践团")]
-[assembly: AssemblyProduct("中医药数据库整理（客户端，Windows窗体应用程序）")]
+[assembly: AssemblyProduct("中医药数据库查询（客户端，Windows窗体应用程序）")]
 [assembly: AssemblyCopyright("CopyLeft © 2019 - Forever, Zhong Y. Jie. Partial Rights Reserved, Licensed Under GNU General Public License v3.")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("landspark.cn")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 会使此程序集中的类型
@@ -33,7 +33,7 @@ using System.Runtime.InteropServices;
 //可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值
 //通过使用 "*"，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.2.1")]
-[assembly: AssemblyFileVersion("1.0.2.2")]
+[assembly: AssemblyVersion("1.0.2.4")]
+[assembly: AssemblyFileVersion("1.0.2.4")]
 [assembly: NeutralResourcesLanguage("zh-CN")]
 

@@ -134,9 +134,6 @@
     <None Include="Resources\Images\ECUST\Badge_White_Reversed.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Images\ECUST\Badge_White.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
@@ -149,15 +146,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TCMServerConstructionAuxiliary\TCMServerConstructionAuxiliary.csproj">
-      <Project>{39717176-2943-41dc-831e-79f12b152024}</Project>
-      <Name>TCMServerConstructionAuxiliary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\Images\ECUST\School_of_Pharmacy_Transparent.png" />
+    <None Include="Resources\Images\CopyLeft\GPL_v3_Grey.png" />
     <Content Include="Resources\Images\ECUST\School_of_Pharmacy_Transparent_256.ico" />
     <Content Include="School_of_Pharmacy_Transparent_256.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="中医药数据库查询.exe.manifest" size="5609">
+    <dependentAssembly dependencyType="install" codebase="中医药数据库查询.exe.manifest" size="4496">
       <assemblyIdentity name="中医药数据库查询.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AKjMGBSmdB196NHie3vHu+N++o/rtOQC+6NdHbk7/u8=</dsig:DigestValue>
+        <dsig:DigestValue>Vp3BGXLe4a3u/gLixn3WFwAeFZWc/rEsv2Sgr3OlR48=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

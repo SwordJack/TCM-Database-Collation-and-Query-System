@@ -4,7 +4,7 @@
   <description asmv2:iconFile="School_of_Pharmacy_Transparent_256.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Windows窗体访问中医药数据库" version="0.0.2.1" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Windows窗体访问中医药数据库" version="0.0.2.3" language="neutral" processorArchitecture="msil" />
     <commandLine file="Windows窗体访问中医药数据库.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -56,13 +56,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Windows窗体访问中医药数据库.exe" size="1292248">
-      <assemblyIdentity name="Windows窗体访问中医药数据库" version="0.0.2.1" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Windows窗体访问中医药数据库" version="0.0.2.3" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/2SCTLwEDFFtHFuw1FKhkoOb40/nmP8oX+is/ibINOQ=</dsig:DigestValue>
+        <dsig:DigestValue>sDQvjt2ydktk76X6G8zqQFl1WCI5VrVBTd2M+pjFxqg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

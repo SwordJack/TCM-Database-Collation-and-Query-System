@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.btLogin = new System.Windows.Forms.Button();
             this.lblTip = new System.Windows.Forms.Label();
+            this.pbHomeForm = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHomeForm)).BeginInit();
             this.SuspendLayout();
             // 
             // btLogin
             // 
             this.btLogin.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btLogin.Location = new System.Drawing.Point(120, 93);
+            this.btLogin.Location = new System.Drawing.Point(75, 31);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(130, 29);
             this.btLogin.TabIndex = 4;
@@ -47,24 +49,37 @@
             // lblTip
             // 
             this.lblTip.AutoSize = true;
-            this.lblTip.Location = new System.Drawing.Point(118, 181);
+            this.lblTip.Location = new System.Drawing.Point(73, 70);
             this.lblTip.Name = "lblTip";
             this.lblTip.Size = new System.Drawing.Size(0, 12);
             this.lblTip.TabIndex = 11;
+            // 
+            // pbHomeForm
+            // 
+            this.pbHomeForm.Image = global::中医药数据库查询.Properties.Resources.GPL_v3_Grey;
+            this.pbHomeForm.Location = new System.Drawing.Point(206, 75);
+            this.pbHomeForm.Name = "pbHomeForm";
+            this.pbHomeForm.Size = new System.Drawing.Size(71, 35);
+            this.pbHomeForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHomeForm.TabIndex = 12;
+            this.pbHomeForm.TabStop = false;
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 277);
+            this.ClientSize = new System.Drawing.Size(279, 113);
+            this.Controls.Add(this.pbHomeForm);
             this.Controls.Add(this.lblTip);
             this.Controls.Add(this.btLogin);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "中医药数据库查询";
+            ((System.ComponentModel.ISupportInitialize)(this.pbHomeForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -74,5 +89,6 @@
 
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.Label lblTip;
+        private System.Windows.Forms.PictureBox pbHomeForm;
     }
 }

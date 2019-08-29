@@ -847,11 +847,11 @@ namespace 中医药数据库查询
                 if (dataGridViewPrescriptionAlias[0, i].Value != null)
                 {
                     if (dataGridViewPrescriptionAlias[0, i].Value != null)
-                        dataGridViewPrescriptionAlias[0, i].Value = dataGridViewPrescriptionAlias[0, i].Value.ToString().Replace("\r\n", "").Replace("《", "").Replace("》", "").Replace("“", "").Replace("”", "").Replace("(", "").Replace(")", "");
+                        dataGridViewPrescriptionAlias[0, i].Value = dataGridViewPrescriptionAlias[0, i].Value.ToString().Replace(" ", "").Replace("\r\n", "").Replace("《", "").Replace("》", "").Replace("“", "").Replace("”", "").Replace("(", "").Replace(")", "");
                     if (dataGridViewPrescriptionAlias[1, i].Value != null)
-                        dataGridViewPrescriptionAlias[1, i].Value = dataGridViewPrescriptionAlias[1, i].Value.ToString().Replace("\r\n", "").Replace("《", "").Replace("》", "").Replace("“", "").Replace("”", "").Replace("(", "").Replace(")", "");
+                        dataGridViewPrescriptionAlias[1, i].Value = dataGridViewPrescriptionAlias[1, i].Value.ToString().Replace(" ", "").Replace("\r\n", "").Replace("《", "").Replace("》", "").Replace("“", "").Replace("”", "").Replace("(", "").Replace(")", "");
                     if (dataGridViewPrescriptionAlias[2, i].Value != null)
-                        dataGridViewPrescriptionAlias[2, i].Value = dataGridViewPrescriptionAlias[2, i].Value.ToString().Replace("“", "").Replace("”", "").Replace("(", "").Replace(")", "");
+                        dataGridViewPrescriptionAlias[2, i].Value = dataGridViewPrescriptionAlias[2, i].Value.ToString().Replace(" ", "").Replace("\r\n", "").Replace("“", "").Replace("”", "").Replace("(", "").Replace(")", "");
                 }
             }
 
