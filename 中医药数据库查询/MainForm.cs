@@ -85,7 +85,7 @@ namespace 中医药数据库查询
                 tcmAdapter = new SqlDataAdapter(command);
                 dataSetMedSel = new DataSet();
                 tcmAdapter.Fill(dataSetMedSel);
-                if (dataSetPreSel.Tables.Count > 0) dataGridViewMain0.DataSource = dataSetMedSel.Tables[0];       //显示第一张表。
+                dataGridViewMain0.DataSource = dataSetMedSel.Tables[0];       //显示第一张表。
                 if (dataSetMedSel.Tables.Count > 1)
                 {
                     dataGridViewMain1.DataSource = dataSetMedSel.Tables[1];   //若返回的结果集数量大于1，则显示第二张表。
@@ -101,6 +101,11 @@ namespace 中医药数据库查询
                     if (tbSelMed.Text.Length == 17) tbSelMedMessage.Text = ("药物信息精确检索完成。");
                     else tbSelMedMessage.Text = ("代码长度不正确，检索无结果。");
                 }
+                command.Dispose();
+            }
+            catch (System.IndexOutOfRangeException exc)
+            {
+                tbSelMedMessage.Text = String.Format("查询无结果。", exc);
                 command.Dispose();
             }
             catch (Exception exc)

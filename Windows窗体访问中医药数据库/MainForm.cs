@@ -93,6 +93,8 @@ namespace 中医药数据库查询
                 {
                     dataGridViewMain1.DataSource = dataSetMedSel.Tables[1];   //若返回的结果集数量大于1，则显示别名匹配表。
                 }
+
+
                 tcmAdapter.Dispose();
                 if (tbSelMedName.Text != "")
                 {

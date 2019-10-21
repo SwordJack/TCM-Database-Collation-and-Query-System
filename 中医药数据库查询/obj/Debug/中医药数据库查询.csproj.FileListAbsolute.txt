@@ -13,3 +13,4 @@ F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\中医药数据库查询\obj\Debug\中医药数据库查询.application
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\中医药数据库查询\obj\Debug\中医药数据库查询.exe
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\中医药数据库查询\obj\Debug\中医药数据库查询.pdb
+F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\中医药数据库查询\obj\Debug\中医药数据库查询.csprojAssemblyReference.cache
