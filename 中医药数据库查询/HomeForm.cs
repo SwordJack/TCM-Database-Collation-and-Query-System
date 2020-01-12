@@ -26,7 +26,7 @@ namespace 中医药数据库查询
         private void BtLogin_Click(object sender, EventArgs e)
         {
             btLogin.Enabled = false;
-            scsb.DataSource = "49.234.214.35,1433";
+            scsb.DataSource = "XXXXXXXXX";      //远程数据库服务器。
             scsb.InitialCatalog = "TraditionalChineseMedicine";
             scsb.UserID = "Spectator";
             MainForm mainForm = new MainForm();

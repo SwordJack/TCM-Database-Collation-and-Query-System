@@ -36,7 +36,7 @@ namespace Console访问中医药数据库_测试_
         {
             SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
 
-            scsb.DataSource = "LAPTOP-QQP3LJKA\\SQL_EXPRESS";   //SQL Server的服务器位置，此处为本地SQL Server。
+            scsb.DataSource = "localhost";   //SQL Server的服务器位置，此处为本地SQL Server。
             scsb.InitialCatalog = "TraditionalChineseMedicine"; //连接的数据库的名称。
             scsb.IntegratedSecurity = true;                     //连接SQL Server所用账号，此处使用Windows账户登陆。
 

@@ -67,8 +67,8 @@ namespace 中医药数据库查询
         private void BuildConnectionString(int connectionCode)
         {
             scsb.Clear();
-            if (cbServerAddress.SelectedIndex == 1) scsb.DataSource = "LAPTOP-QQP3LJKA\\SQL_EXPRESS";   //本地数据库服务器。
-            else scsb.DataSource = "49.234.214.35,1433\\SQL_TCMASSEMBLY";       //远程数据库服务器。
+            if (cbServerAddress.SelectedIndex == 1) scsb.DataSource = "localhost";   //本地数据库服务器。
+            else scsb.DataSource = "XXXXXXXXX";       //远程数据库服务器。
             scsb.InitialCatalog = tbDatabase.Text;
             if (connectionCode == 0)
             {
