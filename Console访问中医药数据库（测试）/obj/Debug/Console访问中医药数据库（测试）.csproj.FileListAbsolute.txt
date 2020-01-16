@@ -8,3 +8,12 @@ F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\bin\Debug\TCMServerConstructionAuxiliary.dll
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\bin\Debug\TCMServerConstructionAuxiliary.pdb
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Console访问中医药数据库（测试）\obj\Debug\Console访问中医药数据库（测试）.csproj.CopyComplete
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Console访问中医药数据库（测试）\bin\Debug\Console访问中医药数据库（测试）.exe.config
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Console访问中医药数据库（测试）\bin\Debug\Console访问中医药数据库（测试）.exe
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Console访问中医药数据库（测试）\bin\Debug\Console访问中医药数据库（测试）.pdb
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Console访问中医药数据库（测试）\bin\Debug\TCMServerConstructionAuxiliary.dll
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Console访问中医药数据库（测试）\bin\Debug\TCMServerConstructionAuxiliary.pdb
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Console访问中医药数据库（测试）\obj\Debug\Console访问中医药数据库（测试）.csprojAssemblyReference.cache
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Console访问中医药数据库（测试）\obj\Debug\Console访问中医药数据库（测试）.csproj.CopyComplete
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Console访问中医药数据库（测试）\obj\Debug\Console访问中医药数据库（测试）.exe
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Console访问中医药数据库（测试）\obj\Debug\Console访问中医药数据库（测试）.pdb

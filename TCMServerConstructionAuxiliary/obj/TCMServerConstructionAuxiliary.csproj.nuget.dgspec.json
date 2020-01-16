@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Github Documents\\TCM_Assembly\\TCMServerConstructionAuxiliary\\TCMServerConstructionAuxiliary.csproj": {}
+    "F:\\Github Documents\\TCM-Database-Collation-and-Query-System\\TCMServerConstructionAuxiliary\\TCMServerConstructionAuxiliary.csproj": {}
   },
   "projects": {
-    "F:\\Github Documents\\TCM_Assembly\\TCMServerConstructionAuxiliary\\TCMServerConstructionAuxiliary.csproj": {
+    "F:\\Github Documents\\TCM-Database-Collation-and-Query-System\\TCMServerConstructionAuxiliary\\TCMServerConstructionAuxiliary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Github Documents\\TCM_Assembly\\TCMServerConstructionAuxiliary\\TCMServerConstructionAuxiliary.csproj",
+        "projectUniqueName": "F:\\Github Documents\\TCM-Database-Collation-and-Query-System\\TCMServerConstructionAuxiliary\\TCMServerConstructionAuxiliary.csproj",
         "projectName": "TCMServerConstructionAuxiliary",
-        "projectPath": "F:\\Github Documents\\TCM_Assembly\\TCMServerConstructionAuxiliary\\TCMServerConstructionAuxiliary.csproj",
+        "projectPath": "F:\\Github Documents\\TCM-Database-Collation-and-Query-System\\TCMServerConstructionAuxiliary\\TCMServerConstructionAuxiliary.csproj",
         "packagesPath": "C:\\Users\\失之时间\\.nuget\\packages\\",
-        "outputPath": "F:\\Github Documents\\TCM_Assembly\\TCMServerConstructionAuxiliary\\obj\\",
+        "outputPath": "F:\\Github Documents\\TCM-Database-Collation-and-Query-System\\TCMServerConstructionAuxiliary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

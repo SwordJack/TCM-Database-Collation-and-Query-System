@@ -7,3 +7,10 @@ F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.dll
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.pdb
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.csprojAssemblyReference.cache
+F:\Github Documents\TCM-Database-Collation-and-Query-System\TCMServerConstructionAuxiliary\bin\Debug\netstandard2.0\TCMServerConstructionAuxiliary.deps.json
+F:\Github Documents\TCM-Database-Collation-and-Query-System\TCMServerConstructionAuxiliary\bin\Debug\netstandard2.0\TCMServerConstructionAuxiliary.dll
+F:\Github Documents\TCM-Database-Collation-and-Query-System\TCMServerConstructionAuxiliary\bin\Debug\netstandard2.0\TCMServerConstructionAuxiliary.pdb
+F:\Github Documents\TCM-Database-Collation-and-Query-System\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.AssemblyInfoInputs.cache
+F:\Github Documents\TCM-Database-Collation-and-Query-System\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.AssemblyInfo.cs
+F:\Github Documents\TCM-Database-Collation-and-Query-System\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.dll
+F:\Github Documents\TCM-Database-Collation-and-Query-System\TCMServerConstructionAuxiliary\obj\Debug\netstandard2.0\TCMServerConstructionAuxiliary.pdb

@@ -17,3 +17,21 @@ F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体访问中医药数据库\obj\Debug\中医药数据库查询.EntranceForm.resources
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体访问中医药数据库\obj\Debug\中医药数据库查询.HomeForm.resources
 F:\Learning\本科时期\假期社会实践\2019_暑假\VS_中医药数据库整理\Windows窗体访问中医药数据库\obj\Debug\中医药数据库查询.MainForm.resources
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\bin\Debug\Windows窗体访问中医药数据库.exe.config
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\bin\Debug\Windows窗体访问中医药数据库.exe.manifest
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\bin\Debug\Windows窗体访问中医药数据库.application
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\bin\Debug\Windows窗体访问中医药数据库.exe
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\bin\Debug\Windows窗体访问中医药数据库.pdb
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\bin\Debug\TCMServerConstructionAuxiliary.dll
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\bin\Debug\TCMServerConstructionAuxiliary.pdb
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\obj\Debug\Windows窗体访问中医药数据库.csprojAssemblyReference.cache
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\obj\Debug\中医药数据库查询.EntranceForm.resources
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\obj\Debug\中医药数据库查询.HomeForm.resources
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\obj\Debug\中医药数据库查询.MainForm.resources
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\obj\Debug\Windows窗体访问中医药数据库.Properties.Resources.resources
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\obj\Debug\Windows窗体访问中医药数据库.csproj.GenerateResource.cache
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\obj\Debug\Windows窗体访问中医药数据库.exe.manifest
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\obj\Debug\Windows窗体访问中医药数据库.application
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\obj\Debug\Windows窗体访问中医药数据库.csproj.CopyComplete
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\obj\Debug\Windows窗体访问中医药数据库.exe
+F:\Github Documents\TCM-Database-Collation-and-Query-System\Windows窗体访问中医药数据库\obj\Debug\Windows窗体访问中医药数据库.pdb
