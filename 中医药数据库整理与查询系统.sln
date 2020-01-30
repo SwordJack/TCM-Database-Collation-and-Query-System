@@ -37,6 +37,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LandSpark(1)", "LandSpark\"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "中医药数据库查询", "中医药数据库查询\中医药数据库查询.csproj", "{B8E4C98C-135D-4682-8614-A1D6B3523527}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandSpark_Query_API", "LandSpark_Query_API\LandSpark_Query_API.csproj", "{BC2C3F86-CFEE-4C46-9277-E55992804F6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{B8E4C98C-135D-4682-8614-A1D6B3523527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8E4C98C-135D-4682-8614-A1D6B3523527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8E4C98C-135D-4682-8614-A1D6B3523527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC2C3F86-CFEE-4C46-9277-E55992804F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC2C3F86-CFEE-4C46-9277-E55992804F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC2C3F86-CFEE-4C46-9277-E55992804F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC2C3F86-CFEE-4C46-9277-E55992804F6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

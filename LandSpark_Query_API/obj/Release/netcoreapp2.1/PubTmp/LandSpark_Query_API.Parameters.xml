@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Landspark_Api" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^F:\\Learning\\本科时期\\假期社会实践\\2019_暑假\\VS_中医药数据库整理\\LandSpark_Query_API\\bin\\Release\\netcoreapp2\.1\\publish\\$" />
+  </parameter>
+</parameters>
