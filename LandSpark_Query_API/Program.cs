@@ -12,11 +12,11 @@ using Microsoft.Extensions.Logging;
  * 以下为开发者引用；
  * 2020.01.17, 17:51
  */
-using LandSpark_Query_API.Services;
 using Serilog;              //Serilog主库。
 using Serilog.AspNetCore;   //Serilog库的ASP.Net Core支持。
 using Serilog.Events;
 using Serilog.Sinks.File;   //将日志输出到文件上。
+using LandSpark_Query_API.Areas.TCM.Services;
 
 namespace LandSpark_Query_API
 {

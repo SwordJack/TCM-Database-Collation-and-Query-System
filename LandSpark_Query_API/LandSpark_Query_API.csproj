@@ -9,16 +9,20 @@
     <NeutralLanguage></NeutralLanguage>
     <Authors>Zhong Y. Jie</Authors>
     <Copyright>CopyLeft © 2019 - Forever, Zhong Y. Jie. Partial Rights Reserved, Licensed Under GNU GPL v3.</Copyright>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <GeneratePackageOnBuild></GeneratePackageOnBuild>
-    <Description>此版本在输入输出接口的体现上实现了中医药数据库查询的基本功能，仍有待于进一步的完善。</Description>
-    <AssemblyVersion>2.0.0.2</AssemblyVersion>
-    <FileVersion>2.0.0.2</FileVersion>
-    <PackageReleaseNotes>打包时间：2020年01月23日22点22分</PackageReleaseNotes>
+    <Description>用于土星信号台（www.landspark.cn）下中医药信息服务公益平台（Traditional-Chinese-Medicine）作网站后端使用，已完成药物、方剂查询、用户登录、药物图片上传的后台实现。</Description>
+    <AssemblyVersion>2.0.0.3</AssemblyVersion>
+    <FileVersion>2.0.0.3</FileVersion>
+    <PackageReleaseNotes>此程序仅供土星信号台（www.landspark.cn）下中医药信息服务公益平台（Traditional-Chinese-Medicine）作网站后端使用。</PackageReleaseNotes>
+    <UserSecretsId>28ca1812-7df6-487e-a5d1-856262882a4f</UserSecretsId>
+    <Company>landspark.cn</Company>
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Dtos\" />
     <Folder Include="Resources\Images\Icons\" />
+    <Folder Include="Services\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -34,6 +38,12 @@
     <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
     <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

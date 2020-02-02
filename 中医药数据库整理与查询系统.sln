@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console访问中医药数据库（测试）", "Console访问中医药数据库（测试）\Console访问中医药数据库（测试）.csproj", "{2478F853-3E21-4130-A9BA-CF3C41CA06F6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCMServerConstructionAuxiliary", "TCMServerConstructionAuxiliary\TCMServerConstructionAuxiliary.csproj", "{39717176-2943-41DC-831E-79F12B152024}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows窗体访问中医药数据库", "Windows窗体访问中医药数据库\Windows窗体访问中医药数据库.csproj", "{176441C4-EB37-4E2D-AA5F-DBD145E98B7C}"
@@ -14,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LandSpark(1)", "LandSpark\", "{6718F82E-0D42-4971-B6B9-9D16D2391440}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LandSpark", "LandSpark\", "{6718F82E-0D42-4971-B6B9-9D16D2391440}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_64891"
@@ -37,7 +35,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LandSpark(1)", "LandSpark\"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "中医药数据库查询", "中医药数据库查询\中医药数据库查询.csproj", "{B8E4C98C-135D-4682-8614-A1D6B3523527}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandSpark_Query_API", "LandSpark_Query_API\LandSpark_Query_API.csproj", "{BC2C3F86-CFEE-4C46-9277-E55992804F6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LandSpark_Query_API", "LandSpark_Query_API\LandSpark_Query_API.csproj", "{BC2C3F86-CFEE-4C46-9277-E55992804F6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "控制台实验室", "控制台实验室\控制台实验室.csproj", "{2478F853-3E21-4130-A9BA-CF3C41CA06F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,10 +45,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2478F853-3E21-4130-A9BA-CF3C41CA06F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2478F853-3E21-4130-A9BA-CF3C41CA06F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2478F853-3E21-4130-A9BA-CF3C41CA06F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2478F853-3E21-4130-A9BA-CF3C41CA06F6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{39717176-2943-41DC-831E-79F12B152024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{39717176-2943-41DC-831E-79F12B152024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39717176-2943-41DC-831E-79F12B152024}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,6 +65,10 @@ Global
 		{BC2C3F86-CFEE-4C46-9277-E55992804F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC2C3F86-CFEE-4C46-9277-E55992804F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC2C3F86-CFEE-4C46-9277-E55992804F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2478F853-3E21-4130-A9BA-CF3C41CA06F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2478F853-3E21-4130-A9BA-CF3C41CA06F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2478F853-3E21-4130-A9BA-CF3C41CA06F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2478F853-3E21-4130-A9BA-CF3C41CA06F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

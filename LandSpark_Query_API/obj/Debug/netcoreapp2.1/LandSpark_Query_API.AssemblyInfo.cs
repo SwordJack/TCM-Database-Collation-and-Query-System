@@ -11,16 +11,17 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Zhong Y. Jie")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("landspark.cn")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("CopyLeft © 2019 - Forever, Zhong Y. Jie. Partial Rights Reserved, Licensed Under " +
     "GNU GPL v3.")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("此版本在输入输出接口的体现上实现了中医药数据库查询的基本功能，仍有待于进一步的完善。")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.0.2")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.2")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("用于土星信号台（www.landspark.cn）下中医药信息服务公益平台（Traditional-Chinese-Medicine）作网站后端使用，已完成药物、" +
+    "方剂查询、用户登录、药物图片上传的后台实现。")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.0.3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.3")]
 [assembly: System.Reflection.AssemblyProductAttribute("LandSpark.cn_Procedure_Set")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LandSpark.cn_Procedure_Set")]
-[assembly: System.Reflection.AssemblyVersionAttribute("2.0.0.2")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2.0.0.3")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 
