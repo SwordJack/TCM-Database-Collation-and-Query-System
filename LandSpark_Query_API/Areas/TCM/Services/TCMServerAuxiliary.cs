@@ -205,7 +205,7 @@ namespace LandSpark_Query_API.Areas.TCM.Services
         /// 根据输入的账号密码，判断登录是否成功。
         /// </summary>
         /// <param name="username">用户名</param>
-        /// <param name="password">密码</param>
+        /// <param name="password">密码（密文）</param>
         /// <returns></returns>
         public static ResponseWithStatusCode ExecuteSelectScalarQuery(string username, string password)
         {
@@ -213,11 +213,10 @@ namespace LandSpark_Query_API.Areas.TCM.Services
             {
                 using (SqlCommand command = new SqlCommand("Get_Member_Login", conn))
                 {
-                    string passwordEncrypted = SqlDataPreprocessing.PasswordEncryption(password);   //计算密码的密文。
 
                     command.CommandType = CommandType.StoredProcedure;          //向存储过程装载参数。
                     command.Parameters.AddWithValue("@Member_uid", username);
-                    command.Parameters.AddWithValue("@Password_Encrypted", passwordEncrypted);
+                    command.Parameters.AddWithValue("@Password_Encrypted", password);
 
                     try
                     {
@@ -287,31 +286,6 @@ namespace LandSpark_Query_API.Areas.TCM.Services
         /// </summary>
         public static string TCMConnString { get; } = ConfigManager.Configuration.GetSection("ConnectionStrings:SqlConnection:TCM").Value;
 
-        /// <summary>
-        /// 用SHA256算法对密码进行加密处理。
-        /// </summary>
-        /// <param name="data">待加密的字符串。</param>
-        /// <returns></returns>
-        public static string PasswordEncryption(string data)
-        {
-            byte[] buffer = Encoding.UTF8.GetBytes(data);
-            byte[] hashResult = SHA256.Create().ComputeHash(buffer);
-
-            StringBuilder builder = new StringBuilder();
-            foreach (byte i in hashResult)
-            {
-                builder.Append(i.ToString("X2"));
-                /*
-                 * C# ToString("x2")的理解：
-                 * 1）转化为16进制；
-                 * 2）大写X:ToString("X2")即转化为大写的16进制；
-                 * 3）小写x:ToString("x2")即转化为小写的16进制；
-                 * 4）2表示输出两位，不足的2位的前面补0，如 0x0A 如果没有2，就只会输出0xA。
-                 */
-            }
-
-            return builder.ToString();
-        }
 
         /// <summary>
         /// 根据权限编号，组装激活和登出应用程序角色的命令。

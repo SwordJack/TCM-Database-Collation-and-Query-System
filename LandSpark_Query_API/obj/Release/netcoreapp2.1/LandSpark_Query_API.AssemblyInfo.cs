@@ -17,11 +17,11 @@ using System.Reflection;
     "GNU GPL v3.")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("用于土星信号台（www.landspark.cn）下中医药信息服务公益平台（Traditional-Chinese-Medicine）作网站后端使用，已完成药物、" +
     "方剂查询、用户登录、药物图片上传的后台实现。")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.0.3")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.3")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.1.2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.2")]
 [assembly: System.Reflection.AssemblyProductAttribute("LandSpark.cn_Procedure_Set")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LandSpark.cn_Procedure_Set")]
-[assembly: System.Reflection.AssemblyVersionAttribute("2.0.0.3")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2.0.1.2")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 

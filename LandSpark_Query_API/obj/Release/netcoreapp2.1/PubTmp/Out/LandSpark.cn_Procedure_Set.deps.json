@@ -22,7 +22,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "LandSpark.cn_Procedure_Set/0.0.3": {
+      "LandSpark.cn_Procedure_Set/0.1.2": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
@@ -3672,7 +3672,7 @@
     }
   },
   "libraries": {
-    "LandSpark.cn_Procedure_Set/0.0.3": {
+    "LandSpark.cn_Procedure_Set/0.1.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

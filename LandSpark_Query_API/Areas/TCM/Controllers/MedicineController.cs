@@ -14,6 +14,7 @@ using System.IO;
 using System.Drawing;                   //用于读取和返回图片。
 using Microsoft.Extensions.Logging;     //用于生成日志。
 using LandSpark_Query_API.Areas.TCM.Services;
+using LandSpark_Query_API.Areas.TCM.Dtos;   //用于调用数据传输对象。
 using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -29,7 +30,7 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
             _logger = logger;
         }
 
-
+        #region 药物信息检索
         // GET: /<controller>/
         public IActionResult Index()
         {
@@ -231,6 +232,9 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
             //}
         }
 
+        #endregion
+
+        #region 药物信息录入
         /// <summary>
         /// 接受经授权的用户将上传的图片文件，并将文件信息录入到数据库和NFS文件系统。
         /// </summary>
@@ -245,8 +249,9 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
 
             string imageDirectory = LandsparkTCMDataService.SiteFileDirectory + @"Resources\TCM_Image\";           //图片的保存目录。
 
-            string username = this.User.Identity.Name;
-            string functionNameToLog = $"MedicineImageUpload By '{username}'";  //用于在日志中记录方法名，包含方法名称和用户。
+            LandSpark_Query_API.Areas.TCM.Dtos.MedicineImageUpload upload = new LandSpark_Query_API.Areas.TCM.Dtos.MedicineImageUpload(medicineCode, this.User.Identity.Name);  //Dtos目录下的类名称恰与此控制器名称相同，故使用类的完整名称。
+
+            string functionNameToLog = $"MedicineImageUpload By '{upload.Username}'";  //用于在日志中记录方法名，包含方法名称和用户。
 
             if (!(formData is null))
             {
@@ -268,38 +273,41 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
                         return Forbid();
                     }
 
-                    string queryText = $"EXEC [Insert_Medicine_Image] @TCM_Code = '{medicineCode}', @File_Name = '{medicineCode}{pictureTypeUploaded}', @DataConstructer = '{username}'";
+                    upload.ImgFileName = $"{upload.MedicineCode}{pictureTypeUploaded}";
+
+                    string queryText = $"EXEC [Insert_Medicine_Image] @TCM_Code = '{upload.MedicineCode}', @File_Name = '{upload.ImgFileName}', @DataConstructer = '{upload.Username}'";
                     var response = LandsparkTCMDataService.ExecuteInsertQuery(queryText);
 
                     if (response.StatusCode != 401)
                     {
-                        statusController.CallLog(functionNameToLog, medicineCode, response.StatusCode); //记录日志。
-                        using (FileStream fs = new FileStream($"{imageDirectory}{medicineCode}{pictureTypeUploaded}", FileMode.Create, FileAccess.Write))   //启用文件流，创建并写入文件到路径地址。
+                        statusController.CallLog(functionNameToLog, upload.MedicineCode, response.StatusCode); //记录日志。
+                        using (FileStream fs = new FileStream($"{imageDirectory}{upload.ImgFileName}", FileMode.Create, FileAccess.Write))   //启用文件流，创建并写入文件到路径地址。
                         {
                             imgFile.CopyTo(fs);     //将所接收文件复制到文件流。
                             fs.Flush();             //将文件流信息写入文件，并清除文件流。
                         }
+                        upload.AffectedRowsCount = Convert.ToInt32(response.Data);
+                        return StatusCode(201, upload.GetUploadStatus());
                     }
                     else
                     {
-                        statusController.CallLog(functionNameToLog, medicineCode, response.StatusCode, response.Data);    //报回401错误，则记录错误信息。
-                        
+                        statusController.CallLog(functionNameToLog, upload.MedicineCode, response.StatusCode, response.Data);    //报回401错误，则记录错误信息。
+                        return statusController.HandleResponse(response);
                     }
-                    return statusController.HandleResponse(response);
 
                 }
                 catch (Exception ex)
                 {
-                    statusController.CallLog(functionNameToLog, medicineCode, 500, ex);
+                    statusController.CallLog(functionNameToLog, upload.MedicineCode, 500, ex);
                     return StatusCode(500);
                 }
             }
             else
             {
-                statusController.CallLog(functionNameToLog, medicineCode, 403, "无文件。");
+                statusController.CallLog(functionNameToLog, upload.MedicineCode, 403, "无文件。");
                 return Forbid();
             }
         }
-
+        #endregion
     }
 }

@@ -9,11 +9,11 @@
     <NeutralLanguage></NeutralLanguage>
     <Authors>Zhong Y. Jie</Authors>
     <Copyright>CopyLeft © 2019 - Forever, Zhong Y. Jie. Partial Rights Reserved, Licensed Under GNU GPL v3.</Copyright>
-    <Version>0.0.3</Version>
+    <Version>0.1.2</Version>
     <GeneratePackageOnBuild></GeneratePackageOnBuild>
     <Description>用于土星信号台（www.landspark.cn）下中医药信息服务公益平台（Traditional-Chinese-Medicine）作网站后端使用，已完成药物、方剂查询、用户登录、药物图片上传的后台实现。</Description>
-    <AssemblyVersion>2.0.0.3</AssemblyVersion>
-    <FileVersion>2.0.0.3</FileVersion>
+    <AssemblyVersion>2.0.1.2</AssemblyVersion>
+    <FileVersion>2.0.1.2</FileVersion>
     <PackageReleaseNotes>此程序仅供土星信号台（www.landspark.cn）下中医药信息服务公益平台（Traditional-Chinese-Medicine）作网站后端使用。</PackageReleaseNotes>
     <UserSecretsId>28ca1812-7df6-487e-a5d1-856262882a4f</UserSecretsId>
     <Company>landspark.cn</Company>

@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
  * 2020.01.31, 11:44
  */
 using LandSpark_Query_API.Areas.TCM.Services;       //用于提供数据库服务。
+using LandSpark_Query_API.Areas.TCM.Dtos;           //用于调用数据传输对象。
 using Microsoft.AspNetCore.Authentication;          //用于用户登录。
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -30,6 +31,28 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
         }
 
         /// <summary>
+        /// 未登录时的返回页。
+        /// </summary>
+        /// <returns></returns>
+        //GET api/Traditional-Chinese-Medicine/Account/
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return Ok("因你未登录，访问被拒止，故显示此消息。");
+        }
+
+        /// <summary>
+        /// 不符合权限策略时的返回页。
+        /// </summary>
+        /// <returns></returns>
+        //GET api/Traditional-Chinese-Medicine/Account/Forbid/
+        [HttpGet("Forbid")]
+        public IActionResult ForbidRequset()
+        {
+            return Ok("因当前登录账号权限受限，访问被拒止，故显示此消息。");
+        }
+
+        /// <summary>
         /// 接收HttpPost登录请求。
         /// </summary>
         /// <param name="username">用户名</param>
@@ -44,7 +67,9 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
                 return Forbid();
             }
 
-            var response = LandsparkTCMDataService.ExecuteSelectScalarQuery(username, password);
+            Account account = new Account(username, password);
+
+            var response = LandsparkTCMDataService.ExecuteSelectScalarQuery(account.Username, account.PwdEncrypted);
             
             StatusController<AccountController> statusController = new StatusController<AccountController>(_logger);
             if (response.StatusCode == 200)     //状态码为200，说明正确地与数据库进行了交互。
@@ -54,10 +79,12 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
             else    //其它状态码，说明与数据库的交互出现异常，不宜继续进行之后的操作。
             {
                 statusController.CallLog("Login", username, response.StatusCode, response.Data);
-                return Unauthorized();
+                return statusController.HandleResponse(response);
             }
 
-            if ((int)response.Data == 1)
+            account.Authorized = (int)response.Data;
+
+            if (account.Authorized == 1)
             {
                 List<Claim> claims = new List<Claim>
                 {
@@ -76,10 +103,8 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
                         AllowRefresh = false
                     }).ConfigureAwait(false);
 
-                return Ok(1);
-                //return Ok("登录成功。");
             }
-            return Ok(0);
+            return Ok(account.GetAccountStatus());
             //return Ok("登录失败");
         }
 
@@ -92,8 +117,9 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
+            Account account = new Account(this.User.Identity.Name);
             await HttpContext.SignOutAsync().ConfigureAwait(false);
-            return (Ok(-1));
+            return Ok(account.GetAccountStatus());
         }
 
         /**以上代码起实际作用。**/
