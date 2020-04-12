@@ -57,7 +57,8 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
             }
             else
             {
-                string queryText = $"EXEC [Get_Medicine_By_Name] @input = N'{name.Replace("\'", "")}'";    //将过滤引号后的参数赋给查询语句。
+                name = LandsparkTCMDataService.FilterDangerousCharacters(name);
+                string queryText = $"EXEC [Get_Medicine_By_Name] @input = N'{name}'";    //将过滤引号后的参数赋给查询语句。
                 var response = LandsparkTCMDataService.ExecuteSelectDatasetQuery(queryText);
 
                 if (response.StatusCode != 401)

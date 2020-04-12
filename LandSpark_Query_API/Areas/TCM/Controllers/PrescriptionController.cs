@@ -57,7 +57,8 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
             }
             else if (nameStatus)
             {
-                string queryText = $"EXEC [Get_Prescription_By_Name] @input = N'{name.Replace("\'", "")}';";    //将过滤引号后的参数赋给查询语句。
+                name = LandsparkTCMDataService.FilterDangerousCharacters(name);
+                string queryText = $"EXEC [Get_Prescription_By_Name] @input = N'{name}';";    //将过滤引号后的参数赋给查询语句。
                 var response = LandsparkTCMDataService.ExecuteSelectDatasetQuery(queryText);
 
                 if (response.StatusCode != 401)
@@ -73,7 +74,8 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
             }
             else if (keyStatus)
             {
-                string queryText = $"EXEC [Get_Prescription_By_Key] @input = N'{key.Replace("\'", "")}';";    //将过滤引号后的参数赋给查询语句。
+                key = LandsparkTCMDataService.FilterDangerousCharacters(key);
+                string queryText = $"EXEC [Get_Prescription_By_Key] @input = N'{key}';";    //将过滤引号后的参数赋给查询语句。
                 var response = LandsparkTCMDataService.ExecuteSelectDatasetQuery(queryText);
 
                 if (response.StatusCode != 401)

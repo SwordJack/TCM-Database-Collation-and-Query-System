@@ -122,6 +122,23 @@ namespace LandSpark_Query_API.Areas.TCM.Services
         }
 
         /// <summary>
+        /// 过滤输入内容中的危险字符。
+        /// </summary>
+        /// <param name="input">需要进行字符过滤的输入内容</param>
+        /// <returns></returns>
+        public static string FilterDangerousCharacters(string input)
+        {
+            List<string> dangerousCharacters = new List<string>
+                    {"\'", "\"", "%", "*", ".", "\\", "/", "?", "[", "]"};
+            string output = input;
+            foreach (string i in dangerousCharacters)
+            {
+                output = output.Replace(i, string.Empty);
+            }
+            return output;
+        }
+
+        /// <summary>
         /// 根据SQL语句，从数据库获取数据集形式结果。
         /// </summary>
         /// <param name="SQLText">Select类，返回数据集的SQL命令。</param>
