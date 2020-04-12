@@ -45,26 +45,51 @@ namespace LandSpark_Query_API.Areas.TCM.Controllers
 
             IQueryCollection parameters = HttpContext.Request.Query;
             string name = parameters["name"];
-            if (name.Length == 0)
+            string key = parameters["key"];
+
+            bool nameStatus = !string.IsNullOrEmpty(name);   //记录name是否为null或空。
+            bool keyStatus = !string.IsNullOrEmpty(key);     //记录key是否为null或空。
+
+            if (!(nameStatus || keyStatus) || (nameStatus && keyStatus))     //name和key均为空或均不为空时，进行重定向。
             {
                 statusController.CallLog("PrescriptionSearch", null, 301); //记录日志。
                 return Redirect("../prescription/");  //重定向至prescription目录。
             }
-            else
+            else if (nameStatus)
             {
                 string queryText = $"EXEC [Get_Prescription_By_Name] @input = N'{name.Replace("\'", "")}';";    //将过滤引号后的参数赋给查询语句。
                 var response = LandsparkTCMDataService.ExecuteSelectDatasetQuery(queryText);
 
                 if (response.StatusCode != 401)
                 {
-                    statusController.CallLog("PrescriptionSearch", name, response.StatusCode); //记录日志。
+                    statusController.CallLog("PrescriptionSearch - Name", name, response.StatusCode); //记录日志。
                 }
                 else
                 {
-                    statusController.CallLog("PrescriptionSearch", name, response.StatusCode, response.Data);   //报回401错误，则记录错误信息。
+                    statusController.CallLog("PrescriptionSearch - Name", name, response.StatusCode, response.Data);   //报回401错误，则记录错误信息。
                 }
 
                 return statusController.HandleResponse(response);
+            }
+            else if (keyStatus)
+            {
+                string queryText = $"EXEC [Get_Prescription_By_Key] @input = N'{key.Replace("\'", "")}';";    //将过滤引号后的参数赋给查询语句。
+                var response = LandsparkTCMDataService.ExecuteSelectDatasetQuery(queryText);
+
+                if (response.StatusCode != 401)
+                {
+                    statusController.CallLog("PrescriptionSearch - Key", key, response.StatusCode); //记录日志。
+                }
+                else
+                {
+                    statusController.CallLog("PrescriptionSearch - Key", key, response.StatusCode, response.Data);   //报回401错误，则记录错误信息。
+                }
+
+                return statusController.HandleResponse(response);
+            }
+            else    //这个情况基本不会发生，只是作为一种兜底。
+            {
+                return Redirect("../prescription/");  //重定向至prescription目录。
             }
         }
 

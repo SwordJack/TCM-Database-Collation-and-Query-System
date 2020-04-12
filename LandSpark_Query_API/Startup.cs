@@ -61,16 +61,16 @@ namespace LandSpark_Query_API
 
             app.UseStatusCodePages();   //asp.net core 有一个 status code middleware：StatusCodePages，在Startup.cs中添加StatusCodePages的使用。
 
-            //配置跨域访问，添加于2020.01.23，供开发阶段使用。
-            app.UseCors(builder =>
-            {
-                builder.AllowAnyHeader();
-                builder.AllowAnyMethod();
-                //builder.WithOrigins("http://localhost:8080");
+            ////配置跨域访问，添加于2020.01.23，供开发阶段使用。
+            //app.UseCors(builder =>
+            //{
+            //    builder.AllowAnyHeader();
+            //    builder.AllowAnyMethod();
+            //    //builder.WithOrigins("http://localhost:8080");
 
-                builder.AllowAnyOrigin();   //开发过程中使用，生产环境不适用。
-            });
-            //以上。
+            //    builder.AllowAnyOrigin();   //开发过程中使用，生产环境不适用。
+            //});
+            ////以上。
 
 
             app.UseMvc();
